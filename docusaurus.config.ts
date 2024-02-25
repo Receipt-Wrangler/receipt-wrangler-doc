@@ -2,6 +2,8 @@ import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
+const githubUrl = "https://github.com/Receipt-Wrangler";
+
 const config: Config = {
   title: "Receipt Wrangler",
   tagline: "Wrangle On!",
@@ -32,13 +34,13 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/Receipt-Wrangler",
+          editUrl: githubUrl,
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/Receipt-Wrangler",
+          editUrl: githubUrl,
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -54,7 +56,7 @@ const config: Config = {
       title: "Receipt Wrangler",
       logo: {
         alt: "My Site Logo",
-        src: "img/logo.svg",
+        src: "favicon.svg",
       },
       items: [
         {
@@ -65,7 +67,7 @@ const config: Config = {
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: githubUrl,
           label: "GitHub",
           position: "right",
         },
@@ -87,16 +89,8 @@ const config: Config = {
           title: "Community",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            },
-            {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              label: "Reddit",
+              href: "https://www.reddit.com/r/receiptwrangler/",
             },
           ],
         },
@@ -104,17 +98,12 @@ const config: Config = {
           title: "More",
           items: [
             {
-              label: "Blog",
-              to: "/blog",
-            },
-            {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              href: githubUrl,
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
