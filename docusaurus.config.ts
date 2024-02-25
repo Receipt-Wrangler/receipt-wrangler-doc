@@ -5,6 +5,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const githubUrl = "https://github.com/Receipt-Wrangler";
 
+const demoUrl = "https://demo.receiptwrangler.io";
+
 const config: Config = {
   title: "Receipt Wrangler",
   tagline: "Wrangle On!",
@@ -71,6 +73,11 @@ const config: Config = {
           label: "GitHub",
           position: "right",
         },
+        {
+          href: demoUrl,
+          label: "Demo",
+          position: "right",
+        },
       ],
     },
     footer: {
@@ -100,6 +107,10 @@ const config: Config = {
             {
               label: "GitHub",
               href: githubUrl,
+            },
+            {
+              label: "Demo",
+              href: demoUrl,
             },
           ],
         },
