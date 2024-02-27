@@ -1,4 +1,4 @@
-# Examples
+# postgresql
 
 Below are some examples for a postgresql based configuration.
 
