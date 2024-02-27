@@ -10,7 +10,9 @@ Multiple images can be sent in attachements, and each image will be assumed to b
 All of the emails configured in emailSettings will be polled every polling interval, to read unread emails, and process those that match the group settings, set up in the next step.
 
 2. Modify group settings
-   Once the email credentials are added to the config, we need to update our group settings to actually read from that email address.
+   Once the email credentials are added to the config, we need to update our group settings to actually read from that email address. The group's settings can be found by clicking on your user avatar, clicking manage groups, then clicking on the edit pencil of the group you'd like to edit.
+
+## Group Settings
 
 ### Enable Email Integration
 
