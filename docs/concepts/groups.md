@@ -4,7 +4,7 @@ Groups are the primary way in which users interact with the app.
 
 ## How to get to groups?
 
-After logging in, groups are displayed on the left hand side. To navigate between groups, simply click on a group icon.
+After logging in, groups are displayed on the app's sidebar. To navigate between groups, simply click on a group icon.
 
 ![dashboard](/img/wrangler-dashboard.png)
 
