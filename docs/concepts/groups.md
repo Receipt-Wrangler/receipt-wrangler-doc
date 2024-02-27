@@ -8,6 +8,12 @@ After logging in, groups are displayed on the left hand side. To navigate betwee
 
 ![dashboard](/img/wrangler-dashboard.png)
 
+### How do I manage groups?
+
+You can see a list of all of the groups you are in by clicking on your user avatar in the top left, then clicking on "Manage Groups" as pictured below.
+
+![manage groups](/img/wrangler-avatar-menu.png)
+
 ## What are they?
 
 The primary purpose of a group is to organize receipts, and users around a topic.
