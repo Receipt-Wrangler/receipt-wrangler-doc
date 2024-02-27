@@ -3,6 +3,16 @@
  * and scoped locally.
  */
 
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonMargin {
+  margin-right: 12px;
+}
+
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
