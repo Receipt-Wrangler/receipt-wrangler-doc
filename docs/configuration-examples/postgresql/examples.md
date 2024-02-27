@@ -2,9 +2,9 @@
 
 Below are some examples for a postgresql based configuration.
 
-## Config
+## Main config
 
-```javascript
+```javascript title="config.prod.json"
 {
   "secretKey": "secretKey",
   "aiSettings": {
@@ -38,7 +38,7 @@ Below are some examples for a postgresql based configuration.
 
 ## Docker compose microservices
 
-```yaml docker-compose.yaml
+```yaml title="docker-compose.yaml"
 version: "3.5"
 services:
   db:
@@ -88,7 +88,7 @@ services:
 
 ## Docker compose monolithic
 
-```yaml docker-compose.yaml
+```yaml title="docker-compose.yaml"
 services:
   db:
     image: postgres

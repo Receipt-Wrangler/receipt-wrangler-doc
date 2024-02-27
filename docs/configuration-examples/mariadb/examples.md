@@ -2,9 +2,9 @@
 
 Below are some examples for a mariadb/mysql based configuration.
 
-## Config
+## Main config
 
-```javascript
+```javascript title="config.prod.json"
 {
   "secretKey": "secretKey",
   "aiSettings": {
@@ -38,7 +38,7 @@ Below are some examples for a mariadb/mysql based configuration.
 
 ## Docker compose microservices
 
-```yaml docker-compose.yaml
+```yaml title="docker-compose.yaml"
 version: "3.5"
 services:
   db:
@@ -90,7 +90,7 @@ services:
 
 ## Docker compose monolithic
 
-```yaml docker-compose.yaml
+```yaml title="docker-compose.yaml"
 services:
   db:
     image: library/mariadb:10

@@ -2,9 +2,9 @@
 
 Below are some examples for a sqlite based configuration.
 
-## Config
+## Main config
 
-```javascript
+```javascript title="config.prod.json"
 {
   "secretKey": "secretKey",
   "aiSettings": {
@@ -35,7 +35,7 @@ Below are some examples for a sqlite based configuration.
 
 ## Docker compose microservices
 
-```yaml docker-compose.yaml
+```yaml title="docker-compose.yaml"
 version: "3.5"
 services:
   api:
@@ -67,7 +67,7 @@ services:
 
 ## Docker compose monolithic
 
-```yaml docker-compose.yaml
+```yaml title="docker-compose.yaml"
 services:
   wrangler:
     image: noah231515/receipt-wrangler:latest
