@@ -9,7 +9,7 @@ const demoUrl = "https://demo.receiptwrangler.io";
 
 const config: Config = {
   title: "Receipt Wrangler",
-  tagline: "Wrangle On!",
+  tagline: "Tame your receipts. Open source, self-hosted.",
   favicon: "favicon.svg",
 
   // Set the production url of your site here
