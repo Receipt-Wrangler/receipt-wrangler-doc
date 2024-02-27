@@ -4,20 +4,9 @@ sidebar_position: 1
 
 # Overview
 
-Welcome, thanks for taking a look! Receipt Wrangler is an easy to use self hosted Receipt manager.
-The goal of Receipt Wrangler is to allow users to:
+Receipt Wrangler is your easy-to-use, self-hosted receipt management solution. Simplify your expenses and take control of your financial data with these powerful features:
 
-- Create receipts effortlessly and quickly
-- Catagorize receipts, to search on and filter by
-- Share receipts amongst system users
-- Keep track of who owes who at any given time
-
-# Features
-
-- Multi User
-- Utilizes groups to divide expenses
-- Receipt Searching
-- Receipt Filtering
-- Partial receipt creation with OCR/AI from receipt image to help automate Receipt creation
-- Email integration to upload receipts via email
-- Mobile App (In Progress)
+    * Effortless Receipt Creation: Quickly create receipts with the help of OCR/AI image scanning.
+    * Smart Categorization: Organize receipts for easy filtering.
+    * Collaborative Tracking: Share receipts and track expenses among multiple users.
+    * Email Integration: Seamlessly upload receipts directly from your email, web app, and mobile app (coming soon).
