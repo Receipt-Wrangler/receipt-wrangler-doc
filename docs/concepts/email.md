@@ -24,11 +24,23 @@ The "Email to Read Receipts From" field must match a username from the email set
 
 ### Subject Line Regexes
 
-These regexes drive which emails are read for this group. If no regexes are set up, then any subject line is permissible for processing.
+:::warning
+
+If no subject line regexes are set, then any subject line is permissable.
+
+:::
+
+These regexes drive which emails are read for this group.
 
 ### Email Whitelist
 
-These emails will allow group owners to only accept emails from certain email addresses. If none are configured, then any incoming email address is permissible for processing.
+:::warning
+
+If no subject line regexes are set, or email whitelists are added, then ALL emails will be read.
+
+:::
+
+These emails will allow group owners to only accept emails from certain email addresses.
 
 ### Default Paid By
 
