@@ -5,24 +5,7 @@ Multiple images can be sent in attachements, and each image will be assumed to b
 
 ## Configuration
 
-1. Modify config.prod.json
-   Email(s) can be configured here, in which the Receipt Wrangler api will connect to once the integration is set up.
-
-Add credentials for your email provider, and polling interval (in seconds)
-
-```json
-{
-  "emailPollingInterval": 1800, // 30 minutes
-  "emailSettings": [
-    {
-      "host": "imap.gmail.com", // Your email provider's imap server
-      "port": 993, // Your email provider's imap port
-      "username": "test@gmail.com", // Your email
-      "password": "passwordOrAppPassword" // Your password or app password
-    }
-  ]
-}
-```
+1. Modify config.prod.json. Check out [the Email configuration section](/docs/configuration#emailsettings) to see how to set it up.
 
 All of the emails configured in emailSettings will be polled every polling interval, to read unread emails, and process those that match the group settings, set up in the next step.
 
