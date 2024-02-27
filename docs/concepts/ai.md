@@ -19,7 +19,7 @@ The next workflow is Magic Fill. Magic Fill is a way to quickly fill in a receip
 
 ### Email Integration
 
-The last workflow is using the Email Integration. The Email Integration lets users send in receipts via a configured email and have them essentially Quick Scanned into the system. [Check out the documentation](https://github.com/Receipt-Wrangler/.github/tree/main/integrations) to see how to configure it.
+The last workflow is using the Email Integration. The Email Integration lets users send in receipts via a configured email and have them essentially Quick Scanned into the automatically. [Check out the documentation](/docs/configuration#emailsettings) to see how to configure it.
 
 ### Notes
 
