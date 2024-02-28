@@ -118,9 +118,10 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
     algolia: {
-      appId: process.env.ALGOLIA_APP_ID ?? "placeholder",
-      apiKey: process.env.ALGOLIA_SEARCH_API_KEY ?? "placeholder",
-      indexName: process.env.ALGOLIA_SEARCH_INDEX ?? "placeholder",
+      // Safe to commit directly, per https://www.algolia.com/doc/guides/security/api-keys/#predefined-api-keys
+      appId: "4G85SDCY9J",
+      apiKey: "db3428f7b61a75c01e3c94a1e8f2aec1",
+      indexName: "squid-app-n8wok",
     },
   } satisfies Preset.ThemeConfig,
 };
