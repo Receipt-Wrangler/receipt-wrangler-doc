@@ -122,6 +122,7 @@ const config: Config = {
       appId: "4G85SDCY9J",
       apiKey: "db3428f7b61a75c01e3c94a1e8f2aec1",
       indexName: "squid-app-n8wok",
+      contextualSearch: false,
     },
   } satisfies Preset.ThemeConfig,
 };
