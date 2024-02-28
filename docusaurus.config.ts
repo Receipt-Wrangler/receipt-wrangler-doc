@@ -117,6 +117,11 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    algolia: {
+      appId: process.env.ALGOLIA_APP_ID ?? "placeholder",
+      apiKey: process.env.ALGOLIA_SEARCH_API_KEY ?? "placeholder",
+      indexName: process.env.ALGOLIA_SEARCH_INDEX ?? "placeholder",
+    },
   } satisfies Preset.ThemeConfig,
 };
 
