@@ -96,6 +96,10 @@ const config: Config = {
               label: "Reddit",
               href: "https://www.reddit.com/r/receiptwrangler/",
             },
+            {
+              label: "Privacy Policy",
+              href: "/privacy-policy"
+            }
           ],
         },
         {
