@@ -13,7 +13,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: "Open Source",
-    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
+    Svg: require("@site/static/img/features/openSource.svg").default,
     description: (
       <>
         Receipt Wrangler is a free, open-source project built by and for the
