@@ -3,6 +3,7 @@ import clsx from "clsx";
 import Heading from "@theme/Heading";
 
 import styles from "./styles.module.css";
+import { motion } from "framer-motion";
 
 type FeatureItem = {
   title: string;
@@ -44,15 +45,31 @@ const FeatureList: FeatureItem[] = [
 ];
 
 function Feature({ title, Svg, description }: FeatureItem) {
+        const yMin = Math.random() % -10;
+        const yMax = Math.random() % 10;
   return (
     <div className={clsx("col col--4")}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <motion.svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 100 100" // Example SVG size
+          initial={{ y: 0 }}
+          animate={{ y: [-5, yMax, -5] }}
+          transition={{ duration: 5, repeat: Infinity, repeatType: "loop", ease: "easeInOut" }}
+        >
+          <Svg className={styles.featureSvg} role="img"/>
+        </motion.svg>
       </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
+      <motion.div
+        initial={{ y: 0 }}
+        animate={{ y: [-5, yMax, -5] }}
+        transition={{ duration: 5, repeat: Infinity, repeatType: "loop", ease: "easeInOut" }}
+      >
+        <div className="text--center padding-horiz--md">
+          <Heading as="h3">{title}</Heading>
+          <p>{description}</p>
+        </div>
+      </motion.div>
     </div>
   );
 }
