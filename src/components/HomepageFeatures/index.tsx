@@ -23,7 +23,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Sharing with Others",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    Svg: require("@site/static/img/features/collaborate.svg").default,
     description: (
       <>
         Share receipts within Receipt Wrangler for seamless expense tracking and
