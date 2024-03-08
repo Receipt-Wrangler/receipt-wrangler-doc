@@ -33,7 +33,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "AI Powered",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    Svg: require("@site/static/img/features/aiScan.svg").default,
     description: (
       <>
         Receipt Wrangler's AI features streamline your expense management by
