@@ -8,7 +8,7 @@ Below we'll go through on setting it up in a development environment, and how so
 * Angular CLI run ```npm install -g @angular/cli```
 
 ## Setup
-1. Clone the repository
+1. Clone the repository https://github.com/Receipt-Wrangler/receipt-wrangler-desktop
 2. Open a terminal and navigate to the root of the project
 3. Run ```npm install```
 4. Run ```npm run start```

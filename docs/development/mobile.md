@@ -9,7 +9,7 @@ Below we'll go through on setting it up in a development environment, and how so
 * XCode (For IOS Development) https://developer.apple.com/xcode/
 
 ## Setup
-1. Clone the repository
+1. Clone the repository https://github.com/Receipt-Wrangler/receipt-wrangler-mobile
 2. Open a terminal and navigate to the root of the project
 3. Run ```flutter pub get```
 4. Run ```flutter run```
