@@ -5,7 +5,7 @@ through some of the important technologies.
 
 ## Prerequisites
 
-* Debian environment (recommended)
+* Debian environment (highly recommended)
 * Go https://go.dev/doc/install
 * Python 3.8+ https://www.python.org/downloads/
 
