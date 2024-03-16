@@ -1,7 +1,8 @@
 # Desktop/Web
 
 Receipt Wrangler desktop is an Angular application.  
-Below we'll go through on setting it up in a development environment, and how some of the technologies used.
+Below we'll go through on setting it up in a development environment, and walk through some of the important
+technologies.
 
 ## Prerequisites
 
