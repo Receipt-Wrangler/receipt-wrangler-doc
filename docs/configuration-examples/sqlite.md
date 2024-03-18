@@ -10,7 +10,8 @@ Below are some examples for a sqlite based configuration.
   "aiSettings": {
     "type": "openAi",
     "url": "urlToLocallyHostedLLM",
-    "key": "openAiKey"
+    "key": "openAiKey",
+    "numWorkers": 1
   },
   "emailPollingInterval": 1800,
   "emailSettings": [

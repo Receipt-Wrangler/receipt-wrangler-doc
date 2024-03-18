@@ -1,6 +1,7 @@
 # config.prod.json Setup
 
-Receipt Wrangler has one main configuration file to set up. In a production environment, this file is `config.prod.json`.
+Receipt Wrangler has one main configuration file to set up. In a production environment, this file
+is `config.prod.json`.
 
 # Configuration
 
@@ -12,7 +13,8 @@ Sample config:
   "aiSettings": {
     "type": "openAi",
     "url": "urlToLocallyHostedLLM",
-    "key": "openAiKey"
+    "key": "openAiKey",
+    "numWorkers": 1
   },
   "emailPollingInterval": 1800,
   "emailSettings": [
@@ -47,8 +49,18 @@ Sample config:
 ## AiSettings
 
 - aiSettings.type: Options are openAi, gemini, or llamaGpt
-- aiSettings.url: This value is only used if the the type is set to llamaGpt. F.ex, http://192.168.0.200:3000/api/v1/chat/completions
+- aiSettings.url: This value is only used if the the type is set to llamaGpt.
+  F.ex, http://192.168.0.200:3000/api/v1/chat/completions
 - aiSettings.key: API key used for openAi, and gemini
+- aiSettings.numWorkers: Applies to Quick Scan and defaults to 1. This value limits how many GoRoutines can run *per*
+  quick scan request.
+  For example, if this
+  value is set to 2, and Jen and Bob quick scan 5 files each at the same time, then Jen and Bob will have at max two of
+  their
+  files each processed in parallel. GoRoutines are much lighter than threads, so this value can be higher. The value
+  depends on memory resources, and instance size. If you have a small instance, a value between 5 or 10 could be fine.
+  On a server with a lot of traffic, then a value like 1 or 2 would be more appropriate. If you're not sure, set it to 3
+  and test it out. If the server runs out of memory, it may crash, and you'll need to lower the value.
 
 ## EmailSettings
 
@@ -60,8 +72,10 @@ Sample config:
 
 ## Features
 
-- features.enabledLocalSignUp: This field will enable local sign up. If set to false, then only admins can register users
-- features.aiPoweredReceipts: This field will enable AI features, such as Magic Fill, Quick Scan, and Email Integration if it is setup
+- features.enabledLocalSignUp: This field will enable local sign up. If set to false, then only admins can register
+  users
+- features.aiPoweredReceipts: This field will enable AI features, such as Magic Fill, Quick Scan, and Email Integration
+  if it is setup
 
 ## Database
 
