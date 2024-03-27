@@ -18,9 +18,11 @@ This field will change the group's name. There are no constraints on the group n
 
 ### Status
 
-There are two options for this field: Active and Archived.
-Archived groups will not show up in the group list, however, receipts in archived groups will still count towards a
-user's amount owed seen on the "Summary" dashboard widget.
+There are two options for this field:
+
+**Active:** Active groups show up in the groups list on the sidebar  
+**Archived:** Archived groups do not show up in the group list on the side, however, receipts in archived groups will
+still count towards total owed amounts in the "Summary" dashboard widget.
 
 ### Group Members
 
