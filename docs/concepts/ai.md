@@ -27,10 +27,3 @@ doesn't save it right away. This allows users a chance to modify data as needed 
 The last workflow is using the Email Integration. The Email Integration lets users send in receipts via a configured
 email and have them essentially Quick Scanned into the system
 automatically. [Check out the documentation](/docs/configuration#emailsettings) to see how to configure it.
-
-### Notes
-
-The integration of LlamaGpt is what I would call very experimental, and would only attempt to use it if you have time to
-spare and are an advanced user. During my time playing with it, I couldn't get it to work once. However, the
-infrastructure is in place to theoretically support it. I ran into lots of stability issues with LlamaGpt's API as well
-as the results being completley incorrect and unusable.
