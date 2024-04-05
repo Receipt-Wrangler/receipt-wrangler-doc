@@ -12,8 +12,9 @@ Sample config:
   "secretKey": "secretKey",
   "aiSettings": {
     "type": "openAi",
-    "url": "urlToLocallyHostedLLM",
+    "url": "http://192.168.0.1:1234/v1/chat/completions",
     "key": "openAiKey",
+    "model": "model",
     "numWorkers": 1
   },
   "emailPollingInterval": 1800,
@@ -48,8 +49,10 @@ Sample config:
 
 ## AiSettings
 
-- aiSettings.type: Options are openAi, gemini, or llamaGpt
-- aiSettings.url: This value is only used if the the type is set to llamaGpt.
+- aiSettings.type: Options are openAi, openAiCustom, gemini
+- aiSettings.model: This value is currently only used when the type is set to openAiCustom. This field is optional, but
+  allows the model to be explicit, instead of whichever model is currently loaded on the server.
+- aiSettings.url: This value is only used if the type is set to openAiCustom.
   F.ex, http://192.168.0.200:3000/api/v1/chat/completions
 - aiSettings.key: API key used for openAi, and gemini
 - aiSettings.numWorkers: Applies to Quick Scan and defaults to 1. This value limits how many GoRoutines can run *per*
