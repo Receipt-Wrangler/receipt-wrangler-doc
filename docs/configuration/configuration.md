@@ -15,7 +15,8 @@ Sample config:
     "url": "http://192.168.0.1:1234/v1/chat/completions",
     "key": "openAiKey",
     "model": "model",
-    "numWorkers": 1
+    "numWorkers": 1,
+    "ocrEngine": "tesseract"
   },
   "emailPollingInterval": 1800,
   "emailSettings": [
@@ -49,7 +50,10 @@ Sample config:
 
 ## AiSettings
 
-- aiSettings.type: Options are openAi, openAiCustom, gemini
+- aiSettings.type: Options are:
+    - openAi
+    - openAiCustom
+    - gemini
 - aiSettings.model: This value is currently only used when the type is set to openAiCustom. This field is optional, but
   allows the model to be explicit, instead of whichever model is currently loaded on the server.
 - aiSettings.url: This value is only used if the type is set to openAiCustom.
@@ -64,6 +68,12 @@ Sample config:
   depends on memory resources, and instance size. If you have a small instance, a value between 5 or 10 could be fine.
   On a server with a lot of traffic, then a value like 1 or 2 would be more appropriate. If you're not sure, set it to 3
   and test it out. If the server runs out of memory, it may crash, and you'll need to lower the value.
+- ocrEngine: This value determines what OCR engine to use when reading receipts. Check
+  out [the ocr docs](/docs/concepts/ocr)
+  for more
+  detail. The supported options are:
+    - tesseract
+    - easyOcr
 
 ## EmailSettings
 
