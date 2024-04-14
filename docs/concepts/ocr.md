@@ -1,11 +1,11 @@
 # Ocr
 
 Ocr (Optical Character Recognition) is used in Receipt Wrangler to read the text from receipts. Receipt Wrangler
-currently supports two different OCR engines. Tesseract and EasyOCR.
+currently supports two different OCR engines: Tesseract and EasyOCR.
 
 ## Tesseract
 
-Tesseract is the default engine for Receipt Wrangler. In general, it is faster, but less accurate than easyOcr.  
+Tesseract is the default engine for Receipt Wrangler. In general, it is faster, but less accurate than EasyOCR.  
 On a Ryzen 7 7840U (8 core/16 thread 5.1ghz boost) laptop, it takes about 2 seconds to process the image, and run OCR
 from a scan from the mobile app.
 
