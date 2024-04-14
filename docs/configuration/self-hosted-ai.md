@@ -38,9 +38,12 @@ For some alternatives, take a look at https://github.com/premAI-io/state-of-open
 ## AI Model
 
 Receipt Wrangler has been tested with an RTX 3060Ti using LM Studio on Ubuntu 22.04.4 LTS (Virtualized) with Mistral 7B
-Instruct models with pretty good results.
+Instruct models with pretty good results. The context length can be large, so ideally the more VRAM the better as is the
+case with most AI models.
 
 Anything with similar or better specs should work well. As far as models go, it is recommended to try different models
 to see which one works
 best.
+
+
 

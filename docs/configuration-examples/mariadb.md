@@ -11,7 +11,8 @@ Below are some examples for a mariadb/mysql based configuration.
     "type": "openAi",
     "url": "urlToLocallyHostedLLM",
     "key": "openAiKey", 
-    "numWorkers": 1
+    "numWorkers": 1,
+    "ocrEngine": "tesseract"
   },
   "emailPollingInterval": 1800,
   "emailSettings": [
