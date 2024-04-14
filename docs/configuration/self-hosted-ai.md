@@ -1,16 +1,17 @@
 # Self-hosted AI
 
-Receipt Wrangler can be configured to use a locally hosted AI server that is OpenAI Compliant, instead of OpenAI or
+Receipt Wrangler can be configured to use a locally hosted LLM (Large Language Model) server that is OpenAI Compliant,
+instead of OpenAI or
 Gemini.
 This way, users can have more control over the model used, the hardware involved, and of course, privacy.
 
-Below we'll go over some recommendations for setting up a locally hosted AI server.
+Below we'll go over some recommendations for setting up a locally hosted LLM server.
 
 ## AI Server
 
 :::warning
 
-Some AI servers do not allow for listening on all network interfaces (localhost only), such as GPT4All.  
+Some LLM servers do not allow for listening on all network interfaces (localhost only), such as GPT4All.  
 This will only be an issue if the AI server is on a different machine than the Receipt Wrangler server, so we will want
 to
 keep this in mind as we chose what server to use.
@@ -35,11 +36,12 @@ To set up LM Studio for use in Receipt Wrangler:
 In general this process will be practically the same for every other AI server, but the specifics will vary.
 For some alternatives, take a look at https://github.com/premAI-io/state-of-open-source-ai/blob/main/desktop-apps.md
 
-## AI Model
+## LLM Configuration
 
 Receipt Wrangler has been tested with an RTX 3060Ti using LM Studio on Ubuntu 22.04.4 LTS (Virtualized) with Mistral 7B
-Instruct models with pretty good results. The context length can be large, so ideally the more VRAM the better as is the
-case with most AI models.
+Instruct models with pretty good results, however, it should be considered the bare minimum due to the low amount of
+VRAM. The context length can be large with use in Receipt Wrangler, so the more VRAM the better. Somewhere between 8gb
+and 16gb should be sufficient.
 
 Anything with similar or better specs should work well. As far as models go, it is recommended to try different models
 to see which one works
