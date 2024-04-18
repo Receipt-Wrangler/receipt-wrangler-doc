@@ -47,5 +47,9 @@ Anything with similar or better specs should work well. As far as models go, it 
 to see which one works
 best.
 
+Google Gemma 2b models are also an excellent choice, for fast inference and are great for GPUs with low VRAM. Gemma
+models are
+available in LM Studio with presets as well.
+
 
 
