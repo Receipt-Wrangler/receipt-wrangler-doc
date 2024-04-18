@@ -38,6 +38,14 @@ Google's new policies require new development accounts (such as mine) to run a c
 now) with a minimum of 20 testers for 14 days. If you are at all interested in Receipt Wrangler, and have an Android
 device, I encourage you to join the beta so Receipt Wrangler can get production access as soon as possible.
 
+## Connecting to your server
+
+To connect to your server, users will need to enter the URL to the server. Particularly to the API.  
+For example, if Receipt Wrangler is hosted at https://wrangler.example.com, the API URL would
+be https://wrangler.example.com/api.
+
+If the app is hosted locally, say http://192.168.0.1:8081, the API URL would be http://192.168.0.1:8081/api.
+
 ## Notes
 
 To use the beta mobile app, be sure to update your API
