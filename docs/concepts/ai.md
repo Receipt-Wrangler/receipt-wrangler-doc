@@ -3,6 +3,9 @@
 Receipt Wrangler has the ability to use OCR to pull data off of images, and AI to parse that data into a receipt. There
 are a couple of workflows which the user can use to create receipts quicker with AI.
 
+AI is not required, and can be disabled in the configuration. Doing so will disable the AI workflows, as described
+below.
+
 ## Configuration
 
 Check out [the AI configuration section](/docs/configuration#aisettings) to learn how to configure AI.
