@@ -2,42 +2,6 @@
 
 Below are some examples for a mariadb/mysql based configuration.
 
-## Main config
-
-```javascript title="config.prod.json"
-{
-  "secretKey": "secretKey",
-  "aiSettings": {
-    "type": "openAi",
-    "url": "urlToLocallyHostedLLM",
-    "key": "openAiKey", 
-    "numWorkers": 1,
-    "ocrEngine": "tesseract"
-  },
-  "emailPollingInterval": 1800,
-  "emailSettings": [
-    {
-      "host": "emailHost",
-      "port": "emailPort",
-      "username": "emailAddress",
-      "password": "password/apiKey"
-    }
-  ],
-  "features": {
-    "enableLocalSignUp": true,
-    "aiPoweredReceipts": true
-  },
-  "database": {
-    "user": "wrangler",
-    "password": "changeMe",
-    "name": "wrangler",
-    "host": "db:3306",
-    "engine": "mariadb"
-  }
-}
-
-```
-
 ## Docker compose microservices
 
 ```yaml title="docker-compose.yaml"
@@ -48,14 +12,14 @@ services:
     restart: always
     command: --sql-mode="ANSI_QUOTES"
     environment:
-      MYSQL_ROOT_PASSWORD: change_me
-      MYSQL_USER: wrangler
-      MYSQL_PASSWORD: change_me
-      MYSQL_DATABASE: wrangler
+      - MYSQL_ROOT_PASSWORD=change_me
+      - MYSQL_USER=wrangler
+      - MYSQL_PASSWORD=change_me
+      - MYSQL_DATABASE=wrangler
     volumes:
       - ./mariadb:/var/lib/mysql
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "--silent"]
+      test: [ "CMD", "mysqladmin", "ping", "--silent" ]
       interval: 10s
       timeout: 10s
       retries: 5
@@ -76,9 +40,17 @@ services:
     ports:
       - 9080:8081
     volumes:
-      - ./config:/go/api/config
       - ./data:/go/api/data
       - ./logs:/go/api/logs
+    environment:
+      - ENCRYPTION_KEY=encryptionKey
+      - SECRET_KEY=secretKey
+      - DB_USER=wrangler
+      - DB_PASSWORD=changeMe
+      - DB_NAME=wrangler
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_ENGINE=mariadb
     depends_on:
       db:
         condition: service_healthy
@@ -98,14 +70,14 @@ services:
     image: library/mariadb:10
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: change_me
-      MYSQL_USER: wrangler
-      MYSQL_PASSWORD: change_me
-      MYSQL_DATABASE: wrangler
+      - MYSQL_ROOT_PASSWORD=change_me
+      - MYSQL_USER=wrangler
+      - MYSQL_PASSWORD=change_me
+      - MYSQL_DATABASE=wrangler
     volumes:
       - ./mariadb:/var/lib/mysql
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "--silent"]
+      test: [ "CMD", "mysqladmin", "ping", "--silent" ]
       interval: 10s
       timeout: 10s
       retries: 5
@@ -115,9 +87,17 @@ services:
     entrypoint: ./entrypoint.sh
     restart: always
     volumes:
-      - ./config:/app/receipt-wrangler-api/config
       - ./data:/app/receipt-wrangler-api/data
       - ./sqlite:/app/receipt-wrangler-api/sqlite
+    environment:
+      - ENCRYPTION_KEY=encryptionKey
+      - SECRET_KEY=secretKey
+      - DB_USER=wrangler
+      - DB_PASSWORD=changeMe
+      - DB_NAME=wrangler
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_ENGINE=mariadb
     depends_on:
       db:
         condition: service_healthy

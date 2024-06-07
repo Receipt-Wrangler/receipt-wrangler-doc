@@ -2,39 +2,6 @@
 
 Below are some examples for a sqlite based configuration.
 
-## Main config
-
-```javascript title="config.prod.json"
-{
-  "secretKey": "secretKey",
-  "aiSettings": {
-    "type": "openAi",
-    "url": "urlToLocallyHostedLLM",
-    "key": "openAiKey",
-    "numWorkers": 1,
-    "ocrEngine": "tesseract"
-  },
-  "emailPollingInterval": 1800,
-  "emailSettings": [
-    {
-      "host": "emailHost",
-      "port": "emailPort",
-      "username": "emailAddress",
-      "password": "password/apiKey"
-    }
-  ],
-  "features": {
-    "enableLocalSignUp": true,
-    "aiPoweredReceipts": true
-  },
-  "database": {
-    "engine": "sqlite",
-    "filename": "wrangler.sqlite"
-  }
-}
-
-```
-
 ## Docker compose microservices
 
 ```yaml title="docker-compose.yaml"
@@ -48,10 +15,14 @@ services:
     ports:
       - 9080:8081
     volumes:
-      - ./config:/go/api/config
       - ./data:/go/api/data
       - ./sqlite:/go/api/sqlite
       - ./logs:/go/api/logs
+    environment:
+      - ENCRYPTION_KEY=encryptionKey
+      - SECRET_KEY=secretKey
+      - DB_ENGINE=sqlite
+      - DB_FILENAME=wrangler.sqlite
   proxy:
     image: noah231515/receipt-wrangler-proxy:latest
     ports:
@@ -76,10 +47,11 @@ services:
     entrypoint: ./entrypoint.sh
     restart: always
     environment:
-      DB_FILENAME: wrangler.sqlite
-      DB_ENGINE: sqlite
+      - ENCRYPTION_KEY=encryptionKey
+      - SECRET_KEY=secretKey
+      - DB_ENGINE=sqlite
+      - DB_FILENAME=wrangler.sqlite
     volumes:
-      - ./config:/app/receipt-wrangler-api/config
       - ./data:/app/receipt-wrangler-api/data
       - ./sqlite:/app/receipt-wrangler-api/sqlite
       - ./logs:/app/receipt-wrangler-api/logs
