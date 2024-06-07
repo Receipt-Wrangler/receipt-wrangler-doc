@@ -79,7 +79,12 @@ const config: Config = {
                     href: "/mobile-app-registration",
                     label: "Mobile App Early Access",
                     position: "right",
-                }
+                },
+                {
+                    type: 'docsVersionDropdown',
+                    position: 'left',
+                    dropdownActiveClassDisabled: true,
+                },
             ],
         },
         footer: {
