@@ -42,11 +42,14 @@ task.
 To manage the receipt processing settings, click on the name hyperlink of the receipt processing settings you wish to
 view, or click the edit button in the actions column.
 
-The following screen will be displayed:
+The following form will be displayed:
 
 ![Receipt Processing Settings](/img/receipt-processing-settings/empty-form.png)
 
 ## Header Buttons
+
+- Edit (not pictured): This allows the user to edit the receipt processing settings. This button is only visible when in
+  view mode.
 
 - Connectivity Check: This allows the user to check the connectivity of the receipt processing settings. The result is
   stored as a system task, unless it is being created, then a system task will not be created.
