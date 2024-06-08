@@ -2,7 +2,7 @@
 
 System settings are where app-wide configurations are stored.
 
-To get access to system settings, log in as an administrator, and then click on the avatar menu, and then click the
+To access to system settings, log in as an administrator, and then click on the avatar menu, and then click the
 "System Settings" button, as shown below.
 
 ![System Settings](/img/system-settings/system-settings-arrow.png)
