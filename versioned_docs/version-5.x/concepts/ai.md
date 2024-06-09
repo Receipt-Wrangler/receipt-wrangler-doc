@@ -5,7 +5,9 @@ are a couple of workflows which the user can use to create receipts quicker with
 
 ## Configuration
 
-Check out [the AI configuration section](/docs/configuration#aisettings) to learn how to configure AI.
+Check out [the AI configuration section](/docs/concepts/system-settings/receipt-processing-settings) to learn how to
+configure
+AI.
 
 ## Features
 

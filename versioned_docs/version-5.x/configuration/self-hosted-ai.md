@@ -18,23 +18,19 @@ keep this in mind as we chose what server to use.
 
 :::
 
-The recommended server is [LM Studio](https://lmstudio.ai/).
+## Ollama
 
-LM Studio is free, and the server is very easy to use. Out of the box, it listens on all network interfaces.
+Ollama is by far the easiest LLM to set up and get running and it is the recommended option for self-hosted.
 
-To set up LM Studio for use in Receipt Wrangler:
+It is meant
+to be made easy to run, so model parameters are
+preset for
+ease of use. Ollama is FOSS, and runs very well on hardware with low VRAM, such as an RTX 3060ti which has 8gb of VRAM.
+It can still run llama3 8b models, with good results.
 
-1. Download and install LM Studio on the machine you want to run the AI model on.
-2. Download the model you want to use.
-3. Load the model you want to use in LM Studio.
-4. Navigate to the local server page by clicking the local server on the sidebar.
-5. Turn formatted responses off.
-6. Start server.
-7. In your `config.prod.json` file, set the `aiSettings.type` to `openAiCustom`, and optionally set `model`.
-8. Set the `aiSettings.url` to the URL of the LM Studio server (f.ex http://192.168.0.1:1234/v1/chat/completions).
-
-In general this process will be practically the same for every other AI server, but the specifics will vary.
-For some alternatives, take a look at https://github.com/premAI-io/state-of-open-source-ai/blob/main/desktop-apps.md
+Take a look at [Ollama's Github page](https://github.com/ollama/ollama) to set it up, and then follow the
+[Receipt Wrangler](/docs/concepts/system-settings/receipt-processing-settings)
+documentation to configure it.
 
 ## LLM Configuration
 
@@ -47,9 +43,7 @@ Anything with similar or better specs should work well. As far as models go, it 
 to see which one works
 best.
 
-Google Gemma 2b models are also an excellent choice, for fast inference and are great for GPUs with low VRAM. Gemma
-models are
-available in LM Studio with presets as well.
+If using a GPU with low VRAM, it is recommended to use smaller models, such as 8b models, and smaller.
 
 
 
