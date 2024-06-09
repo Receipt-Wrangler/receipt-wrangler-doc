@@ -86,7 +86,7 @@ it is createdable by a button on the prompts page.
 
 It is also created during the config import process.
 
-```text"
+```text title="Default Prompt"
 Find the receipt's name, total cost, and date. Format the found data as:
 {
     "name": store name,
@@ -124,8 +124,107 @@ There are a few things to note in the default prompt:
 * The structure that Receipt Wrangler is expecting
 * The variables that are available
 
-### Structure
+### Structural Requirements
 
-Receipt Wrangler is expecting the AI to return JSON. The result must be JSON, if it is not, it will fail.
-Additionally, the JSON must match the "UpsertReceiptCommand", found here.
+Receipt Wrangler is expecting the AI to return JSON in a specific format. The full format can be
+found [in the API documentation](/api/#tag/Receipt/operation/createReceipt). The API documentation will also cover which
+fields are required, and which are optional.
+
+Additionally, the dates MUST be in ISO 18601 format, or the date will not be parsed correctly.
+
+In summary the requirements are:
+
+- The format must be in JSON, and in the format
+  specified [in the API documentation](/api/#tag/Receipt/operation/createReceipt).
+- The date MUST be in ISO 18601 format.
+
+If the above conditions are not met, Receipt Wrangler will not be able to parse the data correctly, and any Quick Scans,
+Magic Fills, or Email Integrations will fail.
+
+### Variables
+
+When prompts, administrators will have variables available for them to use. Below is the full list of variables that are
+available. These variables are replaced with the actual data when the prompt is used.
+
+#### @categories
+
+This will use the full list of categories that are available in the system. The format of the categories is as
+shown [in the API documentation](/api/#tag/Category/operation/getAllCategories).
+
+#### @tags
+
+This will use the full list of tags that are available in the system. The format of the tags is as
+shown [in the API documentation](/api/#tag/Tag/operation/getAllTags).
+
+#### @ocrText
+
+This will use the OCR text that was extracted from the receipt.
+
+#### @currentYear
+
+This will use the current year in the UTC timezone.
+
+## Use Cases
+
+Some uses cases for custom prompts are:
+
+* Attempting to itemize all items on a receipt
+* Attempting to itemize, and split all items on a receipt
+* Figuring out who paid the receipt based on the content of the receipt (perhaps by card number, maybe store name, etc.)
+
+Here is an example prompt, of itemizing all items on a receipt by adjusting the prompt.
+
+```text title="Itemize all items on a receipt"
+Find the receipt's name, total cost, and date. Format the found data as:
+{
+    "name": store name,
+    "amount": amount as a number,
+    "date": date in ISO 18601 format in UTC with ALL time values set as 0,
+    "categories": categories,
+    "tags": tags,
+    "receiptItems": items,
+}
+If a store name cannot be confidently found, use 'Default store name' as the default name.
+Omit any value if not found with confidence. Assume the date is in the year @currentYear if not provided.
+The amount must be a float or integer.
+
+Please do NOT add any additional information, only valid JSON.
+Please return the json in plaintext ONLY, do not ever return it in a code block or any other format.
+
+Choose up to 2 categories from the given list based on the receipt's items and store name. If no categories fit, please return an empty array for the field and do not select any categories. When selecting categories, select only the id, like:
+{
+    Id: category id
+}
+
+Emphasize the relationship between the category and the receipt, and use the description of the category to fine tune the results. Do not return categories that have an empty name or do not exist.
+
+Please itemize all items on the receipt.
+Use the key: 'receiptItems' in the resulting JSON.
+The items should be in the format:
+[
+    {
+        "name": item name,
+        "amount": item cost as a number,
+        "name": name of the item as a string,
+        "status": "DRAFT",
+        "chargedToUserId": 1
+    }
+]
+
+When itemizing the receipt, please make sure that the total sum of the items does not exceed the total amount of the receipt.
+
+
+Categories: @categories
+
+Follow the same process as described for categories for tags.
+
+Tags: @tags
+
+Receipt text: @ocrText
+```
+
+It is a decent starting point in understanding how prompts work, but it needs a more robust way to assign items to
+users, at least in a multi-user environment.
+
+
 

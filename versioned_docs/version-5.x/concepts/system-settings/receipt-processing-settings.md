@@ -91,7 +91,8 @@ When selecting Open AI or Gemini as the AI Type, the following fields will be di
 
 This is the API key that will be used with Open AI, or Gemini.
 
-The key is stored encrypted in the database using AES 128 encryption, and it is never exposed in the UI.
+The key is stored encrypted in the database using AES 128 encryption, and it is never exposed in the UI, or transmitted
+to the frontend.
 Thus, when editing the API key, it will replace the existing key. A confirmation dialog will be displayed to confirm the
 change.
 
@@ -117,7 +118,13 @@ This is the model that will be used with Open AI Custom, or Ollama.
 After creating Receipt Processing Settings, system tasks will be created as these settings are being used. Currently,
 system tasks are generated when these settings are used to: Quick Scan, Magic Fill or use in Email Integrations.
 
-Below are some examples a system task (open image in a new tab):
+### Receipt Processing Settings Connectivity Check
+
+This task is either a true or false. If succeeded, the API was able to connect to the AI server, and set a chat
+completion, and the AI has responded. If failed, the API was not able to connect to the AI server, or there was some
+problem with the chat completion. The resulting error is stored in the task.
+
+### Quick Scan/Magic Fill
 
 ![Receipt Processing Settings System Task](/img/receipt-processing-settings/system-tasks.png)
 
