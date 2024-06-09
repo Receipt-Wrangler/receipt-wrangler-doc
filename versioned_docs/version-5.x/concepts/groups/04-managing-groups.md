@@ -43,6 +43,11 @@ the group details or settings.
 
 ## Group Settings
 
+:::info
+Group settings are now only editable by Administrators. This is because group settings contains technical configuration,
+which should not be done by users.
+:::
+
 Clicking on the "Group Settings" tab will navigate users to the group settings screen.
 
 ### Enable Email Integration
