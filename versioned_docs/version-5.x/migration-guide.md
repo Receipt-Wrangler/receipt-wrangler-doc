@@ -17,6 +17,11 @@ The data that is eligible to be migrated from the config is:
 
 ## Steps to migrate
 
+:::warning
+For mariadb/mysql users, the host, and port number have now been separated. Previously, the "host" field in the config
+would look something like: "db:3306", but now host would be "db", and port would be 3306.
+:::
+
 1. The database configuration has moved from the config file, to environment variables. So we need to move the db
    credentials from config.prod.json, to environment variables. Take a look at
    the [example docker compose files](/docs/category/configuration-examples) for examples depending on your db
