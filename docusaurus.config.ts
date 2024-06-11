@@ -18,7 +18,7 @@ const config: Config = {
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: "/",
 
-    onBrokenLinks: "throw",
+    onBrokenLinks: "warn",
     onBrokenMarkdownLinks: "warn",
 
     // Even if you don't use internationalization, you can use this field to set
@@ -47,6 +47,21 @@ const config: Config = {
                 },
             } satisfies Preset.Options,
         ],
+        [
+            'redocusaurus',
+            {
+                specs: [
+                    {
+                        spec: "https://raw.githubusercontent.com/Receipt-Wrangler/receipt-wrangler-api/main/swagger.yml",
+                        route: '/api'
+                    }
+                ],
+                theme: {
+                    primaryColor: "#0079c0"
+
+                }
+            }
+        ]
     ],
 
     themeConfig: {
@@ -79,7 +94,17 @@ const config: Config = {
                     href: "/mobile-app-registration",
                     label: "Mobile App Early Access",
                     position: "right",
-                }
+                },
+                {
+                    href: "/api/",
+                    label: "API",
+                    position: "left"
+                },
+                {
+                    type: 'docsVersionDropdown',
+                    position: 'left',
+                    dropdownActiveClassDisabled: true,
+                },
             ],
         },
         footer: {

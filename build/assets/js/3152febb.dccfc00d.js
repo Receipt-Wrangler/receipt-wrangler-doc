@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkreceipt_wrangler_doc=self.webpackChunkreceipt_wrangler_doc||[]).push([[105],{1626:e=>{e.exports=JSON.parse('{"title":"Getting Started","slug":"/category/getting-started","permalink":"/docs/category/getting-started","navigation":{"next":{"title":"Overview","permalink":"/docs/getting-started/"}}}')}}]);
