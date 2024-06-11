@@ -69,7 +69,7 @@ Sample config:
   On a server with a lot of traffic, then a value like 1 or 2 would be more appropriate. If you're not sure, set it to 3
   and test it out. If the server runs out of memory, it may crash, and you'll need to lower the value.
 - ocrEngine: This value determines what OCR engine to use when reading receipts. Check
-  out [the ocr docs](/docs/concepts/ocr)
+  out [the ocr docs](/docs/4.x/concepts/ocr)
   for more
   detail. The supported options are:
     - tesseract

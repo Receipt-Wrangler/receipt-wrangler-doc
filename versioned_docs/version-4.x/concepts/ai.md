@@ -5,7 +5,7 @@ are a couple of workflows which the user can use to create receipts quicker with
 
 ## Configuration
 
-Check out [the AI configuration section](/docs/configuration#aisettings) to learn how to configure AI.
+Check out [the AI configuration section](/docs/4.x/configuration#aisettings) to learn how to configure AI.
 
 ## Features
 
@@ -26,4 +26,4 @@ doesn't save it right away. This allows users a chance to modify data as needed 
 
 The last workflow is using the Email Integration. The Email Integration lets users send in receipts via a configured
 email and have them essentially Quick Scanned into the system
-automatically. [Check out the documentation](/docs/configuration#emailsettings) to see how to configure it.
+automatically. [Check out the documentation](/docs/4.x/configuration#emailsettings) to see how to configure it.

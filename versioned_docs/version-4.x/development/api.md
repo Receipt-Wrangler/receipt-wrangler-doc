@@ -19,7 +19,8 @@ through some of the important technologies.
 4. Set up a db instance however you like. Sqlite is the easiest route to go. Otherwise, docker is recommended.
    Example mariadb docker
    command: `docker run --name receipt-wrangler-db -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_USER=wrangler -e MYSQL_PASSWORD=123456 -e MYSQL_DATABASE=wrangler -p 9001:3306 -d library/mariadb`.
-5. Add a config.dev.json, and configure as needed. See the [config documentation](/docs/configuration) for more details.
+5. Add a config.dev.json, and configure as needed. See the [config documentation](/docs/4.x/configuration) for more
+   details.
 6. In the terminal navigate to the root project directory
 7. Run `go run .`
 
