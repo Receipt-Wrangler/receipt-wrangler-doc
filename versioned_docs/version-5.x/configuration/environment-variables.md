@@ -3,12 +3,18 @@
 Receipt Wrangler uses a number of environment variables to configure the application. Below is a list of the available
 environment variables and their default values.
 
+:::info
+Check out https://www.random.org/strings/ to generate random strings for the encryption key and secret key.
+
+:::
+
 ## #ENCRYPTION_KEY (Required)
 
 The encryption key is required, and the application will fail to start, unless it is provided. The encryption key is
 used to encrypt sensitive information, such as email passwords, and API Keys.
 
-The provided key must be at least one character long. Internally, the provided keys are transformed using the MD5
+The provided key must be at least one character long, and ideally randomly generated. Internally, the provided keys are
+transformed using the MD5
 hashing algorithm, thus, every key input will have an output of 128 bits which is then used to encrypt and decrypt via
 AES-128 bit encryption.
 
