@@ -38,6 +38,11 @@ depends on memory resources, and instance size. If you have a small instance, a 
 On a server with a lot of traffic, then a value like 1 or 2 would be more appropriate. If you're not sure, set it to 3
 and test it out. If the server runs out of memory, it may crash, and you'll need to lower the value.
 
+### Currency Display
+
+This field determines what text is prefixed to amount fields. By default, this value is "$", it can be changed to any
+string, such as "USD", "CAD", "£", etc.
+
 ### Email polling interval in seconds
 
 This field determines how often enabled email integrations are polled for new emails. The default value is 1800 seconds,
