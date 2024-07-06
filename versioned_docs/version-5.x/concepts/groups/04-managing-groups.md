@@ -92,21 +92,11 @@ This will be the status that will be set on receipts that are uploaded via email
 
 #### Email attachments
 
-Currently email attachments are required, since emails are processed via ocr/ai. If no attachment is found on the email,
+Currently, email attachments are required, since emails are processed via ocr/ai. If no attachment is found on the
+email,
 the email will not be processed.
 
 #### Multiple attachments
 
-Currently there is no way to group multiple attachments into one receipt. So if 20 attachments are sent, then 20
+Currently, there is no way to group multiple attachments into one receipt. So if 20 attachments are sent, then 20
 separate receipts will be created.
-
-#### Overlapping Configurations
-
-Let's say that two groups are configured with the same exact group settings. This means that a group is set up to listen
-to the same emails.
-
-In this case, nothing is done to prevent this scenario as it is not necessairly a bad thing. So, receipts would be
-created for both groups.
-This could potentially be a privacy issue, since a user could capture another user's emails/receipts if using the same
-email address to read from. This is going to be addressed by an option to only allow system administrators to edit the
-group's email settings.
