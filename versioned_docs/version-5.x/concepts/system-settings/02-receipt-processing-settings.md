@@ -107,7 +107,8 @@ When selecting the Open AI Custom or Ollama as the AI Type, the following fields
 When the type is:
 
 - Open AI Custom: This is the full URL to the completion endpoint, such as: http://192.168.0.1:1234/v1/chat/completions.
-- Ollama: This is the BASE URL to the Ollama API, such as: http://192.168.0.118:11434
+- Ollama: This is the FULL URL to the Ollama API, such as: http://192.168.0.118:11434/api/chat (Ollama v0.3.0 and above
+  supported on the latest Receipt Wrangler version.)
 
 ### Model
 
