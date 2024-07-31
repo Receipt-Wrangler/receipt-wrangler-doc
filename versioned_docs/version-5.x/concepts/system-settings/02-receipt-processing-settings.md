@@ -96,11 +96,22 @@ to the frontend.
 Thus, when editing the API key, it will replace the existing key. A confirmation dialog will be displayed to confirm the
 change.
 
+### Model
+
+Model that will be used with Open AI. Model names can be found here: https://platform.openai.com/docs/models.
+
+### Use Vision? (OpenAI Only)
+
+This checkbox determines whether the AI will use vision. If checked, OCR will not be used and the image will be sent to
+the model in the format described here: https://platform.openai.com/docs/guides/vision.
+
+Models that can perform vision are gpt-4o and gpt-4o-mini.
+
 ## Managing Open AI Custom/Ollama Receipt Processing Settings
 
 When selecting the Open AI Custom or Ollama as the AI Type, the following fields will be displayed:
 
-![Receipt Processing Settings Open AI Custom](/img/receipt-processing-settings/open-ai-custom-form.png)
+![Receipt Processing Settings Open AI Custom](/img/receipt-processing-settings/ollama-form.png)
 
 ### URL
 
@@ -110,9 +121,15 @@ When the type is:
 - Ollama: This is the FULL URL to the Ollama API, such as: http://192.168.0.118:11434/api/chat (Ollama v0.3.0 and above
   supported on the latest Receipt Wrangler version.)
 
-### Model
+### Model (Ollama Only)
 
 This is the model that will be used with Open AI Custom, or Ollama.
+
+### Use Vision? (Ollama Only)
+
+This checkbox determines whether the AI will use vision. If checked, OCR will not be used and the image will be sent
+directly to the model in the message. The image is sent in the format described
+here https://github.com/ollama/ollama/blob/main/docs/api.md#chat-request-with-images.
 
 ## System Tasks
 
