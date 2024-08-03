@@ -19,10 +19,13 @@ hashing algorithm, thus, every key input will have an output of 128 bits which i
 AES-128 bit encryption.
 
 :::warning
-This encryption key cannot currently be rotated. If this key is changed, all encrypted data will be lost and will result
+This encryption key cannot currently be rotated. If this key is changed, all encrypted data will not be accessible and
+will result
 in errors since the encrypted data will not be able to be decrypted.
 
 The records with encrypted data will need to deleted and recreated if this happens.
+
+However, if the key is set back to the correct key, the data will be accessible again.
 
 :::
 

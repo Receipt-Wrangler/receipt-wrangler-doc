@@ -4,45 +4,35 @@ sidebar_position: 2
 
 # Installation
 
-Receipt Wrangler is designed to run contanerized, below we will go over how it is set up.
+Receipt Wrangler is designed to run containerized, below we will go over how it is set up.
 
 ## Step 1: Set up docker-compose.yaml
 
 :::warning
 
-If you decide to use the built in proxy, the service names in the compose must remain as they are in the examples,
-otherwise the proxy will not work.
-The ports of each service are free to change, though.
+In the compose files, please leave the service names as they are. Changing them will break the communication between
+containers.
 
 :::
 
 Receipt Wrangler can be set up as either a monolithic app (all in one container), or as microservices (each part as its
 own container).
+
 [Check out the examples to see which one is best suited for you.](/docs/category/configuration-examples)
 
-## Step 2: Add proxy in NPM Proxy Manager (Optional):
+[Check out the available environment variables as well.](/docs/configuration/environment-variables)
+
+## Step 2: Deploy
 
 :::info
 
-If you are using the proxy container in the docker compose stack, skip this step!
+The proxy container in the compose examples is used internally to route traffic to the frontend and api containers. It
+is highly recommended to use the provided proxy container for ease of use. The monolithic container has the proxy built
+in, so it is not
+needed.
+
 :::
 
-If you use npm proxy manager in your setup, we will describe below how it is setup. In general, this step allows us to
-access the frontend, and proxy frontend api calls to the api container.
-
-### Details Tab
-
-![image](https://github.com/Receipt-Wrangler/.github/assets/44912201/9690b448-93d2-41d7-8852-ef411d7283b5)
-
-### Locations Tab
-
-![image](https://github.com/Receipt-Wrangler/.github/assets/44912201/2fe17995-b4c2-40c1-91d3-c046a6666f4d)
-
-## Step 3: Deploy
-
-- With proxy:
-    - Deploy the docker compose stack, and point all traffic to the proxy container
-- Without proxy:
-    - Deploy the docker compose stack, and point all traffic to the forntend container
+Deploy the docker compose stack, and point all traffic to the proxy container
 
 Now it's time to wrangle!
