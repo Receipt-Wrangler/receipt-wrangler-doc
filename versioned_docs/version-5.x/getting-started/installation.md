@@ -33,6 +33,5 @@ needed.
 
 :::
 
-Deploy the docker compose stack, and point all traffic to the proxy container
-
+Deploy the docker compose stack, and point all traffic to the proxy container.
 Now it's time to wrangle!
