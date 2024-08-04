@@ -83,9 +83,6 @@ services:
       - ./data:/app/receipt-wrangler-api/data
       - ./sqlite:/app/receipt-wrangler-api/sqlite
       - ./logs:/app/receipt-wrangler-api/logs
-    depends_on:
-      db:
-        condition: service_healthy
     ports:
       - 9082:80
 ```
