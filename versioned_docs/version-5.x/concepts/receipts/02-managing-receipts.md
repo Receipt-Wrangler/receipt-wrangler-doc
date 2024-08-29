@@ -78,4 +78,44 @@ The options are:
 
 ### Shares
 
+#### Shared with (On add)
+
+Who the share belongs to. This user will be a user of the group that the receipt is assigned to.
+
+#### Name
+
+Name of the share.
+
+#### Amount
+
+Total amount of the share.
+
+#### Status
+
+* Draft
+* Open
+* Resolved
+
+The intended meaning of each status is the same as receipt statuses above.
+
+### How shares work
+
+The shares section is one of the most important areas of a receipt. They represent what a user is paying for. Really,
+this is itemization. Shares can be
+assigned to other users within the group. The shares dictate who owes who money.
+
+Let's use 3 users as an example.
+The example users we will use:  
+Jim with a share of: $30  
+Bill with a share of: $10  
+Bob with a share of: $10
+
+Let's say our receipt was paid for by Jim, with a total amount of $50.
+Since Jim paid for the receipt, this means that Bill and Bob owe Jim $10 each.
+
+If Bill pays his $10 to Jim, then we can set his item(s) to resolved. Bill's resolved shares, or draft shares will not
+count towards him in the calculations used to calculate how much he owes other users.
+
+Bob will still show that he owes Jim $10 since his share is not resolved.
+
 
