@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkreceipt_wrangler_doc=self.webpackChunkreceipt_wrangler_doc||[]).push([[5099],{74632:e=>{e.exports={}}}]);
