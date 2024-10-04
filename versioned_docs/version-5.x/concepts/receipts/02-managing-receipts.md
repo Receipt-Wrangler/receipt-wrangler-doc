@@ -53,7 +53,7 @@ Group that this receipt belongs to.
 
 ### Paid by
 
-Which user in Receipt Wrangler paid for this receipt?
+User who paid for the receipt.
 
 ### Status
 
@@ -98,6 +98,33 @@ Total amount of the share.
 
 The intended meaning of each status is the same as receipt statuses above.
 
+### Quick Actions
+
+Quick actions meant for users to be able to quickly split the receipts in different ways. Clicking the split icon will
+open quick actions.  
+![quick-actions-icon](/img/receipts/receipt-shares.png)
+
+#### Split Evenly
+
+Splitting evenly allows users to split the receipt evenly between any number of users in the group. Simply select the
+users to split
+between, then shares will be added for each user.
+
+![split-evenly](/img/receipts/receipt-split-evenly.png)
+
+#### Split Evenly With Portions
+
+Splitting evenly with portions allows users to split evenly, but adding a custom amount to a user's share.
+For example, if we have two users: Admin and Sadie. Let's say they went to the grocery store together.
+
+Admin and Sadie pay for stuff that they both use, but Admin also really wants to get a pair of shoes at the store too.
+This
+item is for Admin specifically, and Sadie doesn't want to pay for this. In this case, Admin will add the pair of shoes
+to his
+portion so that Sadie doesn't pay for it, and then the rest will be split evenly.
+
+![split-evenly-with-portions](/img/receipts/receipt-split-evenly-with-portion.png)
+
 ### How shares work
 
 The shares section is one of the most important areas of a receipt. They represent what a user is paying for. Really,
@@ -118,4 +145,50 @@ count towards him in the calculations used to calculate how much he owes other u
 
 Bob will still show that he owes Jim $10 since his share is not resolved.
 
+### Comments
+
+The comments section is a place where users can add notes about the receipt.
+
+### Images
+
+In the images section, users can perform multiple actions per image. Below is the image section in edit mode. In view
+mode some of the buttons below will appear, but not all of them. We will go over the buttons from left to right.
+![receipt-image](/img/receipts/receipt-image.png)
+
+#### Upload Image(s)
+
+This button will allow users to upload an image, or multiple images to the receipt.
+
+#### Download Image
+
+This button will download a single image that is currently selected in the image section.
+
+#### Hide Images
+
+This button will hide all the images in the image section.
+
+#### Expand Image
+
+This button will expand the image(s) in the image section.
+
+#### Show Fullscreen Image
+
+This button will show an image in fullscreen mode.
+
+#### Zoom In
+
+This button will zoom into the image that is currently selected.
+
+#### Zoom Out
+
+This button will zoom out of the image that is currently selected.
+
+#### Magic Fill (AI Required)
+
+This button will perform magic fill. This will send the image to the configured AI to read the receipt and fill in the
+form with the data that it found.
+
+#### Remove Image
+
+This button will remove an image from the image section.
 
