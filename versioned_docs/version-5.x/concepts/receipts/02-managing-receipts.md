@@ -4,24 +4,29 @@
 
 Receipts can be viewed by in a few main ways.
 
-* Configuring a dashboard and clicking on a receipt (TODO: add images)
-* Navigating to the receipt list and clicking on a receipt (TODO: add images)
+* Configuring a dashboard and clicking on a receipt ![receipt-dashboard](/img/receipts/receipt-dashboard-receipts.png)
+* Navigating to the receipt table and clicking on a
+  receipt ![receipt-table-receipt](/img/receipts/receipt-table-receipt.png)
 
-You are only allowed to view receipts that you have access to. To view receipts, you must be a user in the group that
+Users are only allowed to view receipts that you have access to. To view receipts, you must be a user in the group that
 the receipt is associated with.
 
 To edit receipts, you must be at least an editor in the group.
 
 ## Adding Receipts
 
-Receipts can be added by:
+Receipts can be added manually by:
 
-* Navigating to the receipt list, and clicking on the add button (TODO: add images)
-* Clicking the add button on the sidebar, then clicking on add receipt (TODO: add images)
+* Navigating to the receipt tale, and clicking on the add
+  button ![receipt-table-add](/img/receipts/receipt-table-add.png)
+* Clicking the add button on the sidebar, then clicking on add
+  receipt. <br/> ![receipt-sidebar-add](/img/receipts/receipt-sidebar-add.png)
+
+If AI is configured, then receipts can be added via AI as well. Check out the [AI section](/docs/concepts/ai).
 
 ## Managing Receipts
 
-Once a user has navigated to a receipt, the following screen will show. (TODO: add receipt form image)
+Once a user has navigated to a receipt, the following screen will show. ![receipt-form](/img/receipts/receipt-form.png)
 
 ### Name
 
