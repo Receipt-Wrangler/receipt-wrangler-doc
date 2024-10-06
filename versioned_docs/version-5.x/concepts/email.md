@@ -8,7 +8,8 @@ malformed (corrupted, not actually an image), then the file will not be processe
 
 1. Configure a System Email in the system settings. Check
    out [the System Settings section](/docs/concepts/system-settings/system-email) to see how to set it up.
-2. In the group(s) of interest, enable the email integration, and select the system email to use. Additionally,
+2. In the group(s) of interest, navigate to the group settings page, enable the email integration, and select the system
+   email to use. Additionally,
    configure
    other fields in the group settings to specify which emails to process. Check
    out [the Group settings section](/docs/concepts/groups/managing-groups#group-settings) for more information.
