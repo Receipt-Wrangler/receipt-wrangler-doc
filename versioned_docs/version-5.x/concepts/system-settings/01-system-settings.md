@@ -14,6 +14,8 @@ to view/edit the system settings.
 
 ![System Settings](/img/system-settings/system-settings-form.png)
 
+## General Settings
+
 ### Enable Local Sign Up
 
 This field determines whether users can sign up for an account. If checked, users can sign up for an account. Otherwise,
@@ -38,11 +40,6 @@ depends on memory resources, and instance size. If you have a small instance, a 
 On a server with a lot of traffic, then a value like 1 or 2 would be more appropriate. If you're not sure, set it to 3
 and test it out. If the server runs out of memory, it may crash, and you'll need to lower the value.
 
-### Currency Display
-
-This field determines what text is prefixed to amount fields. By default, this value is "$", it can be changed to any
-string, such as "USD", "CAD", "£", etc.
-
 ### Email polling interval in seconds
 
 This field determines how often enabled email integrations are polled for new emails. The default value is 1800 seconds,
@@ -58,3 +55,40 @@ integrations to be used, as well as quick scans, and magic fill.
 
 This field contains the Fallback Processing Settings used by the app globally. These fallback settings are used when the
 primary Receipt Processing Settings fail to process a receipt, then the fallback settings are used.
+
+## Currency Settings
+
+## Previews
+
+This shows a quick preview of how the currency will be displayed throughout the app.
+
+### Symbol Display
+
+This field determines what the currency symbol is. By default, this value is "$", it can be changed to any
+string, such as "USD", "CAD", "£", or even an empty string, etc.
+
+## Symbol Position
+
+Symbol position determines where the currency symbol is placed. The options are:
+
+- Start, f.ex $ 100.50
+- End f.ex 100.50 $
+
+## Thousandths Separator
+
+This field determines what the thousandths separator is. The options are:
+
+- , (Comma), f.ex 1,000
+- . (Dot) f.ex 1.000
+
+## Decimal Separator
+
+This field determines what the decimal separator is. The options are:
+
+- , (Comma), f.ex 100,50
+- . (Dot) f.ex 100.50
+
+## Hide Decimal Places
+
+This field determines whether the decimal places are hidden or not. If checked, the decimal places will be hidden,
+otherwise they will be shown.
