@@ -2,7 +2,7 @@
 
 Below are some examples for a sqlite based configuration.
 
-## Docker compose microservices
+## Docker compose microservices (deprecated)
 
 ```yaml title="docker-compose.yaml"
 version: "3.5"
