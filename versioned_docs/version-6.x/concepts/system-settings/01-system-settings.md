@@ -41,7 +41,7 @@ primary Receipt Processing Settings fail to process a receipt, then the fallback
 This section configures the task server. After making changes to the task server settings (except for email polling
 interval),
 the task server must be restarted for changes to take effect. An alert will be shown to remind the user to restart the
-task server when necessary. See the [system tasks](/docs/concepts/system-tasks) documentation for more information.
+task server when necessary. See the [system tasks](/docs/concepts/tasks) documentation for more information.
 
 ### Task Concurrency
 
