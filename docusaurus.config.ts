@@ -34,6 +34,7 @@ const config: Config = {
             "classic",
             {
                 docs: {
+                    includeCurrentVersion: false,
                     sidebarPath: "./sidebars.ts",
                 },
                 blog: {
