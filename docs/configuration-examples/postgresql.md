@@ -2,43 +2,7 @@
 
 Below are some examples for a postgresql based configuration.
 
-## Main config
-
-```javascript title="config.prod.json"
-{
-  "secretKey": "secretKey",
-  "aiSettings": {
-    "type": "openAi",
-    "url": "urlToLocallyHostedLLM",
-    "key": "openAiKey",
-    "numWorkers": 1,
-    "ocrEngine": "tesseract"
-  },
-  "emailPollingInterval": 1800,
-  "emailSettings": [
-    {
-      "host": "emailHost",
-      "port": "emailPort",
-      "username": "emailAddress",
-      "password": "password/apiKey"
-    }
-  ],
-  "features": {
-    "enableLocalSignUp": true,
-    "aiPoweredReceipts": true
-  },
-  "database": {
-    "user": "wrangler",
-    "password": "changeMe",
-    "name": "wrangler",
-    "host": "db",
-    "port": 5432,
-    "engine": "postgresql"
-  }
-}
-```
-
-## Docker compose microservices
+## Docker compose microservices (deprecated)
 
 ```yaml title="docker-compose.yaml"
 version: "3.5"
@@ -47,14 +11,14 @@ services:
     image: postgres
     restart: always
     environment:
-      POSTGRES_USER: wrangler
-      PGUSER: wrangler
-      POSTGRES_PASSWORD: change_me
-      POSTGRES_DB: wrangler
+      - POSTGRES_USER=wrangler
+      - PGUSER=wrangler
+      - POSTGRES_PASSWORD=change_me
+      - POSTGRES_DB=wrangler
     volumes:
       - ./pgsql:/var/lib/pgsql
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready", "-d", "db_prod"]
+      test: [ "CMD-SHELL", "pg_isready", "-d", "db_prod" ]
       interval: 10s
       timeout: 10s
       retries: 5
@@ -74,9 +38,17 @@ services:
     ports:
       - 9080:8081
     volumes:
-      - ./config:/go/api/config
       - ./data:/go/api/data
       - ./logs:/go/api/logs
+    environment:
+      - ENCRYPTION_KEY=encryptionKey
+      - SECRET_KEY=secretKey
+      - DB_USER=wrangler
+      - DB_PASSWORD=changeMe
+      - DB_NAME=wrangler
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_ENGINE=postgresql
     depends_on:
       db:
         condition: service_healthy
@@ -96,13 +68,13 @@ services:
     image: postgres
     restart: always
     environment:
-      POSTGRES_USER: wrangler
-      POSTGRES_PASSWORD: change_me
-      POSTGRES_DB: wrangler
+      - POSTGRES_USER=wrangler
+      - POSTGRES_PASSWORD=change_me
+      - POSTGRES_DB=wrangler
     volumes:
       - ./pgsql:/var/lib/pgsql
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready", "-d", "db_prod"]
+      test: [ "CMD-SHELL", "pg_isready", "-d", "db_prod" ]
       interval: 10s
       timeout: 10s
       retries: 5
@@ -112,9 +84,17 @@ services:
     entrypoint: ./entrypoint.sh
     restart: always
     volumes:
-      - ./config:/app/receipt-wrangler-api/config
       - ./data:/app/receipt-wrangler-api/data
       - ./logs:/app/receipt-wrangler-api/logs
+    environment:
+      - ENCRYPTION_KEY=encryptionKey
+      - SECRET_KEY=secretKey
+      - DB_USER=wrangler
+      - DB_PASSWORD=changeMe
+      - DB_NAME=wrangler
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_ENGINE=postgresql
     depends_on:
       db:
         condition: service_healthy

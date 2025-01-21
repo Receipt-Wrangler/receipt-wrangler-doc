@@ -1,12 +1,24 @@
 # Group Table
 
-## Navigating to groups list
+## Navigating to groups table
 
 To view all of your groups, click on the manage groups button in the avatar header menu as shown below.
 ![avatar-menu](/img/wrangler-avatar-menu.png)
 
-Once on the groups list screen, the following screen will appear.
+Once on the groups table screen, the following screen will appear.
 ![groups-table](/img/groups/group_table.png)
+
+## Header Buttons
+
+- Create Group: Users can click this button to create a new group.
+- Group Filter: This allows administrators to filter between all groups, and my groups. If the user is not an
+  administrator, this button will not be displayed.
+
+## Group Filter
+
+Once the user clicks on the group filter button, the following dialog will appear.
+
+![group-filter](/img/groups/group_filter.png)
 
 ## Table Columns
 
