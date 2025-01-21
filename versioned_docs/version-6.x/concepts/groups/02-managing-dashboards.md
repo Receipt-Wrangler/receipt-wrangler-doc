@@ -10,7 +10,8 @@ Clicking the add blue add button, or the edit pencil will allow you to add or ed
 
 ### Dashboard Name
 
-This will change the dashboard's name. There are no constraints on the dashboard name, other than it must be longer than 0 characters.
+This will change the dashboard's name. There are no constraints on the dashboard name, other than it must be longer than
+0 characters.
 
 ### Widgets
 
@@ -22,7 +23,15 @@ This widget summarizes how much you owe, and how much is owed to you in the grou
 
 #### Filtered Receipts Widget
 
-This widget lets users create a custom filter to see only the receipts they care about. Multiple filters can be added, and the filters can be edited or deleted.
+This widget lets users create a custom filter to see only the receipts they care about. Multiple filters can be added,
+and the filters can be edited or deleted.
 
 The pictured filter for example shows all the receipts that have been resolved.
 The filter is a powerful and flexible way to see exactly what you want to see.
+
+#### Activity Widget
+
+This widget lets users see the activity in the group. Activity includes receipts being added (manually, or via email),
+updated, and quick scans.
+
+If the user in the group has at least editor permissions, they may also rerun failed quick scans from this widget.
