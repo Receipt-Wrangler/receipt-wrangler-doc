@@ -8,7 +8,7 @@ Check out https://www.random.org/strings/ to generate random strings for the enc
 
 :::
 
-## #ENCRYPTION_KEY (Required)
+## ENCRYPTION_KEY (Required)
 
 The encryption key is required, and the application will fail to start, unless it is provided. The encryption key is
 used to encrypt sensitive information, such as email passwords, and API Keys.
@@ -29,34 +29,34 @@ However, if the key is set back to the correct key, the data will be accessible 
 
 :::
 
-## #SECRET_KEY (Required)
+## SECRET_KEY (Required)
 
 This is the secret key used to sign, and verify JWT tokens. This key is required, and the application will fail to
 start, unless it is provided.
 
 The provided key should be between 16 and 32 characters long, randomly generated.
 
-## #DB_USER
+## DB_USER
 
 The database user that the application will use to connect to the database.
 
-## #DB_PASSWORD
+## DB_PASSWORD
 
 The database password that the application will use to connect to the database.
 
-## #DB_HOST
+## DB_HOST
 
 The database host that the application will use to connect to the database.
 
-## #DB_PORT
+## DB_PORT
 
 The database port that the application will use to connect to the database.
 
-## #DB_NAME
+## DB_NAME
 
 The database name that the application will use to connect to the database.
 
-## #DB_ENGINE
+## DB_ENGINE
 
 The database engine that the application will use to connect to the database.
 
@@ -66,3 +66,23 @@ valid options are:
 * postegresql
 * mysql
 * mariadb
+
+## DB_FILIENAME
+
+The filename of the SQLite database that the application will use to connect to the database.
+
+## REDIS_HOST (Required)
+
+The Redis host that the application will use to connect to the Redis server.
+
+## REDIS_PORT (Required)
+
+The Redis port that the application will use to connect to the Redis server.
+
+## REDIS_USER
+
+The Redis user that the application will use to connect to the Redis server.
+
+## REDIS_PASSWORD
+
+The Redis password that the application will use to connect to the Redis server.
