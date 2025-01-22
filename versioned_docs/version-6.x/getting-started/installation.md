@@ -14,24 +14,17 @@ In the compose files, please leave the service names as they are. Changing them 
 containers.
 
 :::
+First thing we need to do is set up the docker compose file. Check out the link to some examples below, these will help
+you get something working ASAP.
 
-Receipt Wrangler can be set up as either a monolithic app (all in one container), or as microservices (each part as its
-own container).
+Additionally, take a look at the environment variables to see what you can configure, and explanations
+of each variable.
 
-[Check out the examples to see which one is best suited for you.](/docs/category/configuration-examples)
+[Examples](/docs/category/configuration-examples)
 
-[Check out the available environment variables as well.](/docs/configuration/environment-variables)
+[All environment variables](/docs/configuration/environment-variables)
 
 ## Step 2: Deploy
 
-:::info
-
-The proxy container in the compose examples is used internally to route traffic to the frontend and api containers. It
-is highly recommended to use the provided proxy container for ease of use. The monolithic container has the proxy built
-in, so it is not
-needed.
-
-:::
-
-Deploy the docker compose stack, and point all traffic to the proxy container.
+Deploy the docker compose stack, and point all traffic to the container.
 Now it's time to wrangle!
