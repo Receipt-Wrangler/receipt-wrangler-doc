@@ -2,44 +2,6 @@
 
 Below are some examples for a sqlite based configuration.
 
-## Docker compose microservices (deprecated)
-
-```yaml title="docker-compose.yaml"
-version: "3.5"
-services:
-  api:
-    image: noah231515/receipt-wrangler-api:latest
-    restart: always
-    working_dir: /go/api
-    command: ./api --env prod
-    ports:
-      - 9080:8081
-    volumes:
-      - ./data:/go/api/data
-      - ./sqlite:/go/api/sqlite
-      - ./logs:/go/api/logs
-    environment:
-      - ENCRYPTION_KEY=encryptionKey
-      - SECRET_KEY=secretKey
-      - DB_ENGINE=sqlite
-      - DB_FILENAME=wrangler.sqlite
-  proxy:
-    image: noah231515/receipt-wrangler-proxy:latest
-    ports:
-      - 9082:80
-    depends_on:
-      - api
-      - frontend
-
-  frontend:
-    image: noah231515/receipt-wrangler-desktop:latest
-    restart: always
-    ports:
-      - 9081:80
-```
-
-## Docker compose monolithic
-
 ```yaml title="docker-compose.yaml"
 services:
   wrangler:
@@ -57,4 +19,10 @@ services:
       - ./logs:/app/receipt-wrangler-api/logs
     ports:
       - 9082:80
+
+  redis:
+    image: redis:alpine
+    environment:
+      - REDIS_USERNAME=myuser
+      - REDIS_PASSWORD=mypassword
 ```
