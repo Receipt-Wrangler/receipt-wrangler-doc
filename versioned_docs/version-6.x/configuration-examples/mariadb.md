@@ -20,6 +20,18 @@ services:
       timeout: 10s
       retries: 5
 
+  redis:
+    image: redis:alpine
+    restart: always
+    environment:
+      - REDIS_USERNAME=myuser
+      - REDIS_PASSWORD=mypassword
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+
   wrangler:
     image: noah231515/receipt-wrangler:latest
     entrypoint: ./entrypoint.sh
@@ -36,15 +48,15 @@ services:
       - DB_HOST=db
       - DB_PORT=3306
       - DB_ENGINE=mariadb
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_USERNAME=myuser
+      - REDIS_PASSWORD=mypassword
     depends_on:
       db:
         condition: service_healthy
+      redis:
+        condition: service_healthy
     ports:
       - 9082:80
-
-  redis:
-    image: redis:alpine
-    environment:
-      - REDIS_USERNAME=myuser
-      - REDIS_PASSWORD=mypassword
 ```
