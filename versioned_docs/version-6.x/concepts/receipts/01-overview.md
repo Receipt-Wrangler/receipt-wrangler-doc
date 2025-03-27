@@ -8,3 +8,4 @@ the receipt, and more.
 
 In the following pages, we will walk through how to manage receipts.
 
+
