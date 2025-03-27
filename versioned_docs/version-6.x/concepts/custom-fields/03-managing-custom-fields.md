@@ -27,6 +27,7 @@ Available types are:
 - Date
 - Select
 - Currency
+- Boolean
 
 ### Options (Only on select)
 
