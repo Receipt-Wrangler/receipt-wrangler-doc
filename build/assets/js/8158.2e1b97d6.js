@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkreceipt_wrangler_doc=self.webpackChunkreceipt_wrangler_doc||[]).push([[8158],{48158:(e,r,c)=>{c.r(r),c.d(r,{DocSearchModal:()=>a.a1});var a=c(55600)}}]);
