@@ -1,5 +1,13 @@
 # sqlite
 
+:::warning
+
+Although sqlite is easy to set up and use, it is not recommended for long term use, as it sometimes has issues with
+updating column specific data such as indexes. This can result in bugs in the app that seem to linger forever due to
+updates not being applied to the database.
+
+:::
+
 Below are some examples for a sqlite based configuration.
 
 ```yaml title="docker-compose.yaml"
