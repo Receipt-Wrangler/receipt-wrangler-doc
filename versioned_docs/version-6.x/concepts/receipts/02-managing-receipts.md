@@ -28,6 +28,21 @@ If AI is configured, then receipts can be added via AI as well. Check out the [A
 
 Once a user has navigated to a receipt, the following screen will show. ![receipt-form](/img/receipts/receipt-form.png)
 
+> **Note:** The fields and sections visible on your receipt form may vary based on your group's settings. Group administrators can configure which fields appear, including hiding categories, tags, comments, images, and more. If you don't see certain fields mentioned in this documentation, they may be hidden for your group.
+
+### Processing Multiple Receipts (Queue Mode)
+
+When you have multiple receipts to process, Receipt Wrangler offers a queue mode that lets you work through them efficiently. This is especially useful after bulk scanning or when processing a batch of receipts.
+
+When in queue mode:
+* A **Queue Details** section appears showing "Receipt X of Y" to track your progress
+* Navigation arrows appear at the bottom of the form
+* Use the **Previous** arrow (or Left Arrow key) to go back
+* Use the **Next** arrow (or Right Arrow key) to move forward
+* The Save button changes behavior to save and automatically advance to the next receipt
+
+Queue mode streamlines the workflow when you need to review or edit multiple receipts in succession.
+
 ### Name
 
 This field is the name of the receipt, only used to help users identify what the receipt is.
@@ -80,6 +95,34 @@ The options are:
   change to resolved.
 * Needs Attention: The receipt has an issue that needs to be addressed. When the receipt is changed to this status, the
   receipt items' status will remain unchanged.
+
+### Custom Fields
+
+Custom fields allow you to add extra information to your receipts beyond the standard fields. These are especially useful for tracking business-specific data, project codes, or any other information unique to your needs.
+
+To manage custom fields on a receipt:
+* Click the **Manage custom fields** button (list icon) in the receipt header
+* Select which custom fields you want to add or remove from the receipt
+* Fill in the values for each custom field you've added
+
+Custom fields can be different types:
+* **Text** - Free-form text entry
+* **Currency** - Monetary values with proper formatting
+* **Date** - Date picker for selecting dates
+* **Select** - Dropdown with predefined options
+* **Boolean** - Yes/No checkbox
+
+The available custom fields are configured at the system level by administrators, and you can choose which ones to use for each receipt.
+
+### Receipt Actions
+
+When viewing a receipt, several action buttons appear in the header:
+
+* **Edit** - Switch from view mode to edit mode (appears when viewing)
+* **Manage custom fields** - Add or remove custom fields for this receipt
+* **Duplicate** - Create a copy of the current receipt with all its data
+
+The duplicate feature is particularly useful when you have similar receipts to enter - just duplicate an existing one and modify the details that differ.
 
 ### Shares
 
@@ -143,6 +186,13 @@ You can add items to your receipt in several ways:
 * Click the **Add Item** button (plus icon) in the Items section header
 * Use the keyboard shortcut **Ctrl+I** for quick access
 * When editing an item, pressing **Enter** in the last field automatically creates a new item row
+
+**Keyboard Shortcuts for Items:**
+* **Ctrl+I** - Open the add item form
+* **Ctrl+Enter** - Add the current item and continue adding more
+* **Ctrl+Shift+Enter** - Add the current item and close the form
+* **Escape** - Cancel the current operation
+* **Tab** - Navigate to the next field
 
 Each item includes these fields:
 
