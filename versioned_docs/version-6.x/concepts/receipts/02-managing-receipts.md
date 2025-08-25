@@ -28,6 +28,21 @@ If AI is configured, then receipts can be added via AI as well. Check out the [A
 
 Once a user has navigated to a receipt, the following screen will show. ![receipt-form](/img/receipts/receipt-form.png)
 
+> **Note:** The fields and sections visible on your receipt form may vary based on your group's settings. Group administrators can configure which fields appear, including hiding categories, tags, comments, images, and more. If you don't see certain fields mentioned in this documentation, they may be hidden for your group.
+
+### Processing Multiple Receipts (Queue Mode)
+
+When you have multiple receipts to process, Receipt Wrangler offers a queue mode that lets you work through them efficiently. This is especially useful after bulk scanning or when processing a batch of receipts.
+
+When in queue mode:
+* A **Queue Details** section appears showing "Receipt X of Y" to track your progress
+* Navigation arrows appear at the bottom of the form
+* Use the **Previous** arrow (or Left Arrow key) to go back
+* Use the **Next** arrow (or Right Arrow key) to move forward
+* The Save button changes behavior to save and automatically advance to the next receipt
+
+Queue mode streamlines the workflow when you need to review or edit multiple receipts in succession.
+
 ### Name
 
 This field is the name of the receipt, only used to help users identify what the receipt is.
@@ -81,6 +96,34 @@ The options are:
 * Needs Attention: The receipt has an issue that needs to be addressed. When the receipt is changed to this status, the
   receipt items' status will remain unchanged.
 
+### Custom Fields
+
+Custom fields allow you to add extra information to your receipts beyond the standard fields. These are especially useful for tracking business-specific data, project codes, or any other information unique to your needs.
+
+To manage custom fields on a receipt:
+* Click the **Manage custom fields** button (list icon) in the receipt header
+* Select which custom fields you want to add or remove from the receipt
+* Fill in the values for each custom field you've added
+
+Custom fields can be different types:
+* **Text** - Free-form text entry
+* **Currency** - Monetary values with proper formatting
+* **Date** - Date picker for selecting dates
+* **Select** - Dropdown with predefined options
+* **Boolean** - Yes/No checkbox
+
+The available custom fields are configured at the system level by administrators, and you can choose which ones to use for each receipt.
+
+### Receipt Actions
+
+When viewing a receipt, several action buttons appear in the header:
+
+* **Edit** - Switch from view mode to edit mode (appears when viewing)
+* **Manage custom fields** - Add or remove custom fields for this receipt
+* **Duplicate** - Create a copy of the current receipt with all its data
+
+The duplicate feature is particularly useful when you have similar receipts to enter - just duplicate an existing one and modify the details that differ.
+
 ### Shares
 
 #### Shared with (On add)
@@ -130,11 +173,86 @@ portion so that Sadie doesn't pay for it, and then the rest will be split evenly
 
 ![split-evenly-with-portions](/img/receipts/receipt-split-evenly-with-portion.png)
 
+### How items work
+
+The Items feature lets you break down your receipt into individual line items, giving you a detailed view of exactly
+what was purchased. This is especially helpful when you need to track specific purchases, split costs differently for
+certain items, or maintain accurate records.
+
+#### Adding Items
+
+You can add items to your receipt in several ways:
+
+* Click the **Add Item** button (plus icon) in the Items section header
+* Use the keyboard shortcut **Ctrl+I** for quick access
+* When editing an item, pressing **Enter** in the last field automatically creates a new item row
+
+**Keyboard Shortcuts for Items:**
+* **Ctrl+I** - Open the add item form
+* **Ctrl+Enter** - Add the current item and continue adding more
+* **Ctrl+Shift+Enter** - Add the current item and close the form
+* **Escape** - Cancel the current operation
+* **Tab** - Navigate to the next field
+
+Each item includes these fields:
+
+* **Name** - What you purchased (e.g., "Coffee", "Sandwich", "Gas")
+* **Amount** - How much that specific item cost
+* **Categories** - Assign categories to individual items for more detailed tracking (optional, based on group settings)
+* **Tags** - Add tags for even more specific organization (optional, based on group settings)
+
+#### Sync Amount with Items
+
+When you check the "Sync with items" checkbox next to the receipt amount, the total receipt amount automatically updates
+based on the sum of all your items. This helps ensure your itemized amounts always match your receipt total, preventing
+discrepancies in your records.
+
+#### Splitting Items
+
+Sometimes you might share a specific item with someone else. The split button next to each item lets you divide that
+item's cost between multiple people. For example, if you and a friend split an appetizer, you can split just that item
+while keeping other items assigned to specific people.
+
+#### Managing Multiple Items
+
+The Items section shows you:
+
+* The total number of items on your receipt
+* The combined total of all items
+* An expandable list where you can view and edit each item
+
+Items automatically calculate their contribution to the receipt total, making it easy to see where your money went on
+each purchase.
+
 ### How shares work
 
-The shares section is one of the most important areas of a receipt. They represent what a user is paying for. Really,
-this is itemization. Shares can be
-assigned to other users within the group. The shares dictate who owes who money.
+Shares represent how the receipt cost is divided among group members. Think of shares as "who owes what" - they track
+each person's portion of the receipt and help you manage repayments between group members.
+
+#### Understanding Shares vs Items
+
+While **items** break down what was purchased on a receipt, **shares** determine who pays for those purchases. You can
+have detailed items and then assign shares to show how the total cost is split between people. Each share can also have
+its own categories and tags for more detailed expense tracking.
+
+#### Creating and Managing Shares
+
+You can add shares in several ways:
+
+* Click the **Add Share** button (plus icon) to manually add a share
+* Use **Quick Actions** for automated splitting options
+* Each share shows the person's total amount and what percentage of the receipt they're responsible for
+
+Each share includes:
+
+* **Shared with** - The group member responsible for this portion
+* **Name** - A description of what this share covers
+* **Amount** - How much this person owes
+* **Categories** - Categorize individual shares (optional, based on group settings)
+* **Tags** - Add tags to shares for detailed tracking (optional, based on group settings)
+* **Status** - Track whether this share has been paid/resolved
+
+#### How Payment Tracking Works
 
 Let's use 3 users as an example.
 The example users we will use:  
@@ -145,10 +263,18 @@ Bob with a share of: $10
 Let's say our receipt was paid for by Jim, with a total amount of $50.
 Since Jim paid for the receipt, this means that Bill and Bob owe Jim $10 each.
 
-If Bill pays his $10 to Jim, then we can set his item(s) to resolved. Bill's resolved shares, or draft shares will not
-count towards him in the calculations used to calculate how much he owes other users.
+When Bill pays
+his $10 to Jim, you can set his share to resolved. Bill's resolved shares won't count towards what he owes in future calculations. Bob will still show that he owes Jim $
+10 since his share is not resolved.
 
-Bob will still show that he owes Jim $10 since his share is not resolved.
+#### Bulk Actions for Shares
+
+For each person's shares, you can:
+
+* View their total amount owed and percentage of the receipt
+* Click the checkmark icon to resolve all of that person's shares at once
+* See how many individual shares they have
+* Expand or collapse their share details for easier management
 
 ### Comments
 
