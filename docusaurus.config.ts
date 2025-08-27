@@ -82,6 +82,11 @@ const config: Config = {
                     label: "Documentation",
                 },
                 {
+                    href: "/project-status",
+                    label: "Project Status",
+                    position: "right",
+                },
+                {
                     href: githubUrl,
                     label: "GitHub",
                     position: "right",

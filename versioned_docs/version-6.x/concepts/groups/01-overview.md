@@ -1,6 +1,6 @@
 # Overview
 
-## What are they?
+## What are Groups?
 
 The primary purpose of a group is to organize receipts, and users around a topic.
 

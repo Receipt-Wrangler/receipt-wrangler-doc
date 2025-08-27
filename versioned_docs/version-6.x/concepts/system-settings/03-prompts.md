@@ -206,8 +206,7 @@ The items should be in the format:
         "name": item name,
         "amount": item cost as a number,
         "name": name of the item as a string,
-        "status": "DRAFT",
-        "chargedToUserId": 1
+        "status": "DRAFT"
     }
 ]
 

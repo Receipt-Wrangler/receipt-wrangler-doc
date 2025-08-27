@@ -79,7 +79,7 @@ The Redis host that the application will use to connect to the Redis server.
 
 The Redis port that the application will use to connect to the Redis server.
 
-## REDIS_USER
+## REDIS_USERNAME
 
 The Redis user that the application will use to connect to the Redis server.
 
