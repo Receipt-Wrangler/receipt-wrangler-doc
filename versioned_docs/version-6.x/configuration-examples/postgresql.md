@@ -14,7 +14,7 @@ services:
     volumes:
       - ./pgsql:/var/lib/pgsql
     healthcheck:
-      test: [ "CMD-SHELL", "pg_isready", "-d", "db_prod" ]
+      test: [ "CMD-SHELL", "pg_isready", "-d", "wrangler" ]
       interval: 10s
       timeout: 10s
       retries: 5
@@ -42,7 +42,7 @@ services:
       - ENCRYPTION_KEY=encryptionKey
       - SECRET_KEY=secretKey
       - DB_USER=wrangler
-      - DB_PASSWORD=changeMe
+      - DB_PASSWORD=change_me
       - DB_NAME=wrangler
       - DB_HOST=db
       - DB_PORT=5432

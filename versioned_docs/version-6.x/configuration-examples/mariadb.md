@@ -38,12 +38,12 @@ services:
     restart: always
     volumes:
       - ./data:/app/receipt-wrangler-api/data
-      - ./sqlite:/app/receipt-wrangler-api/sqlite
+      - ./logs:/app/receipt-wrangler-api/logs
     environment:
       - ENCRYPTION_KEY=encryptionKey
       - SECRET_KEY=secretKey
       - DB_USER=wrangler
-      - DB_PASSWORD=changeMe
+      - DB_PASSWORD=change_me
       - DB_NAME=wrangler
       - DB_HOST=db
       - DB_PORT=3306
