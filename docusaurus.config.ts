@@ -53,7 +53,7 @@ const config: Config = {
             {
                 specs: [
                     {
-                        spec: "https://raw.githubusercontent.com/Receipt-Wrangler/receipt-wrangler-api/main/swagger.yml",
+                        spec: "https://raw.githubusercontent.com/Receipt-Wrangler/receipt-wrangler/refs/heads/main/api/swagger.yml",
                         route: '/api'
                     }
                 ],
