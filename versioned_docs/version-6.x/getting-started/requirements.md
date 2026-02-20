@@ -15,5 +15,5 @@ Before installing Receipt Wrangler, make sure you have the following prerequisit
 
 ## Optional
 
-- **AI provider** — For features like Magic Fill, Quick Scan, and AI-powered receipt processing. Supported providers include OpenAI, Google Gemini, or a self-hosted OpenAI-compatible LLM such as [Ollama](/docs/configuration/self-hosted-ai). See [AI concepts](/docs/concepts/ai) for more information.
+- **AI provider** — Required for any automatic receipt processing such as Magic Fill, Quick Scan, and email integration. Without an AI provider, all receipt data must be entered manually. Supported providers include OpenAI, Google Gemini, or a self-hosted OpenAI-compatible LLM such as [Ollama](/docs/configuration/self-hosted-ai). See [AI concepts](/docs/concepts/ai) for more information.
 - **IMAP-compatible email account** — For automatic receipt ingestion from email. See [email concepts](/docs/concepts/email) for setup instructions.
