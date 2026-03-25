@@ -41,6 +41,39 @@ function HomepageHeader() {
   );
 }
 
+function MobileAppSection() {
+  return (
+    <section className={styles.mobileApp}>
+      <div className="container">
+        <Heading as="h2" className={styles.mobileAppHeading}>
+          Get the Mobile App
+        </Heading>
+        <p className={styles.mobileAppDescription}>
+          Take Receipt Wrangler on the go. Scan receipts, manage expenses, and
+          stay organized from your phone.
+        </p>
+        <div className={styles.mobileAppButtons}>
+          <Link
+            className="button button--primary button--lg"
+            to="https://play.google.com/store/apps/details?id=io.receiptwrangler&hl=en_US"
+          >
+            Android
+          </Link>
+          <span
+            className={clsx(
+              "button button--secondary button--lg",
+              styles.mobileAppDisabled
+            )}
+            title="Coming soon"
+          >
+            iOS — Coming Soon
+          </span>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -51,6 +84,7 @@ export default function Home(): JSX.Element {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
+        <MobileAppSection />
       </main>
     </Layout>
   );

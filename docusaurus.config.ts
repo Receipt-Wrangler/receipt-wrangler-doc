@@ -65,6 +65,20 @@ const config: Config = {
         ]
     ],
 
+    plugins: [
+        [
+            "@docusaurus/plugin-client-redirects",
+            {
+                redirects: [
+                    {
+                        from: "/mobile-app-registration",
+                        to: "/docs/archive/mobile-app-early-access",
+                    },
+                ],
+            },
+        ],
+    ],
+
     themeConfig: {
         // Replace with your project's social card
         image: "img/docusaurus-social-card.jpg",
@@ -97,8 +111,8 @@ const config: Config = {
                     position: "right",
                 },
                 {
-                    href: "/mobile-app-registration",
-                    label: "Mobile App Early Access",
+                    href: "/docs/archive/mobile-app-early-access",
+                    label: "Mobile App",
                     position: "right",
                 },
                 {
