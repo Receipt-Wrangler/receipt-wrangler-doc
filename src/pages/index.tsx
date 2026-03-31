@@ -59,15 +59,12 @@ function MobileAppSection() {
           >
             Android
           </Link>
-          <span
-            className={clsx(
-              "button button--secondary button--lg",
-              styles.mobileAppDisabled
-            )}
-            title="Coming soon"
+          <Link
+            className="button button--primary button--lg"
+            to="https://apps.apple.com/us/app/receipt-wrangler/id6475374843"
           >
-            iOS — Coming Soon
-          </span>
+            iOS
+          </Link>
         </div>
       </div>
     </section>

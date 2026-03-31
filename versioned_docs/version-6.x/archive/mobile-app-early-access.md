@@ -1,7 +1,7 @@
 # Mobile App Early Access
 
 :::info App Now Available
-The Receipt Wrangler mobile app is now publicly available on the [Google Play Store](https://play.google.com/store/apps/details?id=io.receiptwrangler&hl=en_US) and the Apple App Store. The beta program described below is no longer needed. Thank you to everyone who participated in the early access testing!
+The Receipt Wrangler mobile app is now publicly available on the [Google Play Store](https://play.google.com/store/apps/details?id=io.receiptwrangler&hl=en_US) and the [Apple App Store](https://apps.apple.com/us/app/receipt-wrangler/id6475374843). The beta program described below is no longer needed. Thank you to everyone who participated in the early access testing!
 :::
 
 ---
