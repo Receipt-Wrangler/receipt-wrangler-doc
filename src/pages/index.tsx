@@ -54,16 +54,22 @@ function MobileAppSection() {
         </p>
         <div className={styles.mobileAppButtons}>
           <Link
-            className="button button--primary button--lg"
             to="https://play.google.com/store/apps/details?id=io.receiptwrangler&hl=en_US"
           >
-            Android
+            <img
+              src="/svg/Get_on_Google_Play.svg"
+              alt="Get it on Google Play"
+              className={styles.storeBadge}
+            />
           </Link>
           <Link
-            className="button button--primary button--lg"
             to="https://apps.apple.com/us/app/receipt-wrangler/id6475374843"
           >
-            iOS
+            <img
+              src="/svg/Get_on_apple_store.svg"
+              alt="Download on the App Store"
+              className={styles.storeBadge}
+            />
           </Link>
         </div>
       </div>
