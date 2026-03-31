@@ -1,5 +1,13 @@
 # Mobile App Early Access
 
+:::info App Now Available
+The Receipt Wrangler mobile app is now publicly available on the [Google Play Store](https://play.google.com/store/apps/details?id=io.receiptwrangler&hl=en_US) and the [Apple App Store](https://apps.apple.com/us/app/receipt-wrangler/id6475374843). The beta program described below is no longer needed. Thank you to everyone who participated in the early access testing!
+:::
+
+---
+
+*The following content is preserved for historical reference.*
+
 The Receipt Wrangler mobile app is available today on Android and IOS in beta.
 
 Currently, in the mobile app, users can:
@@ -26,11 +34,11 @@ To participate depends on your platform.
 ## IOS
 
 * Navigate to https://testflight.apple.com/join/ccMLtcOB to join the testing group
-* Install TestFlight on the iOS or iPadOS device that you’ll use for testing.
+* Install TestFlight on the iOS or iPadOS device that you'll use for testing.
 * Open your email invitation and tap "View in TestFlight" or tap the public link on your device.
-* If you’re a new tester for the app, tap Accept.
+* If you're a new tester for the app, tap Accept.
 * Tap Install to install the app on your device.
-* If you’re a returning tester, tap Update or Open.
+* If you're a returning tester, tap Update or Open.
 
 If you need more assistance with IOS, check out https://testflight.apple.com/
 
@@ -40,7 +48,7 @@ device, I encourage you to join the beta so Receipt Wrangler can get production 
 
 ## Connecting to your server
 
-To connect to your server, users will need to enter the URL to the server. Particularly to the API.  
+To connect to your server, users will need to enter the URL to the server. Particularly to the API.
 For example, if Receipt Wrangler is hosted at https://wrangler.example.com, the API URL would
 be https://wrangler.example.com/api.
 

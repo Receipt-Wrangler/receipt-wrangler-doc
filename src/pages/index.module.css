@@ -31,3 +31,29 @@
   align-items: center;
   justify-content: center;
 }
+
+.mobileApp {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.mobileAppHeading {
+  margin-bottom: 0.5rem;
+}
+
+.mobileAppDescription {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.mobileAppButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.storeBadge {
+  height: 50px;
+}
