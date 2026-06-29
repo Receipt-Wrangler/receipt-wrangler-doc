@@ -8,7 +8,7 @@ sidebar_position: 3
 
 After the app is deployed, a default user will be created with the following credentials:
 
-```
+```text
 username: admin
 password: admin
 ```
@@ -18,5 +18,5 @@ Visit the manage users screen to set your password. Click on your user avatar to
 ## Configure AI
 
 Once logged in as the administrator, it is recommended to set up any integrations, such as AI, or email settings.
-Take a look at the [AI Concept pages](/concepts/ai.md) and the [Email Concept pages](/concepts/email.md) to get started.
+Take a look at the [AI Concept pages](/docs/concepts/ai) and the [Email Concept pages](/docs/concepts/email) to get started.
 

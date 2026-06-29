@@ -1,13 +1,13 @@
 # Using Custom Fields
 
-In the previous sections, we learned how to set up custom fields, now in this section we will learn how to apply them to
+In the previous sections, we learned how to set up custom fields. In this section, we will learn how to apply them to
 receipts.
 
 ## Adding Custom Fields to a Receipt
 
 Currently custom fields may only be added to a single receipt at a time.
 
-When a user is on a view or edit receipt page, they will see view/edit custom fields button on the header as shown
+When a user is on a view or edit receipt page, they will see the view/edit custom fields button on the header as shown
 below.
 
 ![manage-custom-fields](/img/custom-fields/custom-field-icon.png)

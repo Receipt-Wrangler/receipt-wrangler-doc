@@ -68,13 +68,13 @@ This is a description of the receipt processing settings.
 
 ### Prompt
 
-This is the prompt that will be used with the configured AI![favicon.svg](..%2F..%2F..%2F..%2Fstatic%2Ffavicon.svg)
+This is the prompt that will be used with the configured AI.
 
 ### OCR Engine
 
 This is the OCR Engine that will be used with the configured AI. Currently, Tesseract, and Easy OCR are the supported
 engines. Check out
-the [OCR Engine](/concepts/ocr.md) documentation for more information.
+the [OCR Engine](/docs/concepts/ocr) documentation for more information.
 
 ### AI Type
 

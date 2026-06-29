@@ -35,7 +35,7 @@ make continuous improvements to make the app even better.
 4. Ensure all tests pass before submitting your pull request.
 5. Submit a pull request with a clear description of the changes in the following format:
 
-   ```
+   ```markdown
    # Changes
    * Change 1
    * Change 2
@@ -44,7 +44,7 @@ make continuous improvements to make the app even better.
 
 For example,
 
-```
+```markdown
 # Changes
 * Add support for new feature X
 * Fix bug Y

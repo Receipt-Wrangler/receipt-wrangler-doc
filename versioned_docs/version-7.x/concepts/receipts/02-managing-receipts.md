@@ -2,7 +2,7 @@
 
 ## Viewing Receipts
 
-Receipts can be viewed by in a few main ways.
+Receipts can be viewed in a few main ways.
 
 * Configuring a dashboard and clicking on a receipt ![receipt-dashboard](/img/receipts/receipt-dashboard-receipts.png)
 * Navigating to the receipt table and clicking on a
@@ -17,7 +17,7 @@ To edit receipts, your group role must allow editing receipts (such as the **Leg
 
 Receipts can be added manually by:
 
-* Navigating to the receipt tale, and clicking on the add
+* Navigating to the receipt table, and clicking on the add
   button ![receipt-table-add](/img/receipts/receipt-table-add.png)
 * Clicking the add button on the sidebar, then clicking on add
   receipt. <br/> ![receipt-sidebar-add](/img/receipts/receipt-sidebar-add.png)
@@ -39,13 +39,13 @@ This field is the total amount paid for the receipt.
 ### Categories
 
 This field lets users associate categories to receipts. This allows users to broadly group receipts, which can be later
-filtered on, for example: "Food", "House", "Vacation", "Bills", ect. If the category that the user wants does not exist,
+filtered on, for example: "Food", "House", "Vacation", "Bills", etc. If the category that the user wants does not exist,
 it will be created upon creating/updating the receipt.
 
 ### Tags
 
 This field lets users associate tags to receipts. This allows users to group receipts in a more granular way, which can
-be later filtered on, for example: "Delivery", "Grubhub", "Gas Bill", "Electricity Bill", ect. If the tag that the user
+be later filtered on, for example: "Delivery", "Grubhub", "Gas Bill", "Electricity Bill", etc. If the tag that the user
 wants does not exist, it will be created upon creating/updating the receipt.
 
 ### Date

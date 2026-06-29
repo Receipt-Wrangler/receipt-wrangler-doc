@@ -11,6 +11,7 @@ Receipt Wrangler Documentation - A Docusaurus-based documentation website for th
 > This project uses **npm** as its package manager (single `package-lock.json`).
 
 ### Local Development
+
 ```bash
 npm install         # Installs dependencies
 npm start           # Starts development server on http://localhost:3000 with hot reload
@@ -20,6 +21,7 @@ npm run typecheck   # Runs TypeScript type checking
 ```
 
 ### Deployment
+
 ```bash
 npm run deploy      # Deploys to GitHub Pages (requires GIT_USER or USE_SSH)
 ```

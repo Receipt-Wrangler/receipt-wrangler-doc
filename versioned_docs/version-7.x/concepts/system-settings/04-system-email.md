@@ -97,7 +97,7 @@ An example of the captured data is shown below:
   "subject": "Receipt from Amazon",
   "to": "configuredSystemEmail@test.com",
   "fromName": "Jack Doe",
-  "fromEmail": "John Doe",
+  "fromEmail": "jack.doe@example.com",
   "attachments": [
     {
       "filename": "receipt.pdf",
@@ -115,6 +115,6 @@ An example of the captured data is shown below:
 
 Additionally, the task stores the resulting processing task, and the resulting receipt, if the receipt was successfully,
 the same data as the Receipt Processing Settings would show. Check out
-the [Receipt Processing Settings](/concepts/system-settings/receipt-processing-settings) documentation for more
+the [Receipt Processing Settings](/docs/concepts/system-settings/receipt-processing-settings) documentation for more
 information.
 

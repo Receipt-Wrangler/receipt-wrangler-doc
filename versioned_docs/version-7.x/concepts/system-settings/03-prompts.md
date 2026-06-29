@@ -91,7 +91,7 @@ Find the receipt's name, total cost, and date. Format the found data as:
 {
     "name": store name,
     "amount": amount as a number,
-    "date": date in ISO 18601 format in UTC with ALL time values set as 0,
+    "date": date in ISO 8601 format in UTC with ALL time values set as 0,
     "categories": categories,
     "tags": tags
 }
@@ -130,13 +130,13 @@ Receipt Wrangler is expecting the AI to return JSON in a specific format. The fu
 found [in the API documentation](/api/#tag/Receipt/operation/createReceipt). The API documentation will also cover which
 fields are required, and which are optional.
 
-Additionally, the dates MUST be in ISO 18601 format, or the date will not be parsed correctly.
+Additionally, the dates MUST be in ISO 8601 format, or the date will not be parsed correctly.
 
 In summary the requirements are:
 
 - The format must be in JSON, and in the format
   specified [in the API documentation](/api/#tag/Receipt/operation/createReceipt).
-- The date MUST be in ISO 18601 format.
+- The date MUST be in ISO 8601 format.
 
 If the above conditions are not met, Receipt Wrangler will not be able to parse the data correctly, and any Quick Scans,
 Magic Fills, or Email Integrations will fail.
@@ -179,7 +179,7 @@ Find the receipt's name, total cost, and date. Format the found data as:
 {
     "name": store name,
     "amount": amount as a number,
-    "date": date in ISO 18601 format in UTC with ALL time values set as 0,
+    "date": date in ISO 8601 format in UTC with ALL time values set as 0,
     "categories": categories,
     "tags": tags,
     "receiptItems": items,
@@ -205,7 +205,6 @@ The items should be in the format:
     {
         "name": item name,
         "amount": item cost as a number,
-        "name": name of the item as a string,
         "status": "DRAFT",
         "chargedToUserId": 1
     }

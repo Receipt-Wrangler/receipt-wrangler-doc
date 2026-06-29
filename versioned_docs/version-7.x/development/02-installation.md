@@ -15,17 +15,17 @@ by step to get it installed.
 2\. In your command line, navigate to the dev directory.  
 3\. Build the docker image locally. 
 ```bash
-docker build .
+docker build -t receipt-wrangler-monolith .
 ```
 4\. Run
 ```bash
 docker image ls
 ```
-to view the list of images on your system. The latest image should be the receipt wrangler monolith image. Copy the IMAGE ID to use later.  
+to view the list of images on your system. The latest image should be tagged `receipt-wrangler-monolith`.  
 5\.
 Run the following to start the container
 ```bash
-docker run -d <IMAGE_ID>
+docker run -d receipt-wrangler-monolith
 ```
 6\. The container has been configured to expose ssh from port 22, so you may connect to this container with VSCode, or any other IDE that supports remote development over SSH.
 The default credentials are:

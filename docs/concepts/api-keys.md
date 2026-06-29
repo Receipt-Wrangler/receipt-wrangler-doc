@@ -114,7 +114,7 @@ API keys inherit the permissions of their associated user:
 - **Group Access**: API keys can only access groups that the user is a member of
 - **Admin Privileges**: API keys created by administrators have administrative access
 
-All API keys have full read and write access to resources that the associated user can access.
+An API key can perform any action—read or write—that its associated user is currently permitted to perform, and nothing more. Because permissions are inherited from the user's role, a key's access automatically reflects any changes to that user's permissions.
 
 ### Usage Tracking
 

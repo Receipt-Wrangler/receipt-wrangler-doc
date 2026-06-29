@@ -3,7 +3,7 @@ This section details some tips on common development tasks/setup.
 
 ## API
 
-1\. Developers may switch easily between sqlite, postgresql, and mariadb environment variables by using the scripts in /receipt-wrangler/api/dev. Use
+1\. Developers may switch easily between sqlite, postgresql, and mariadb environment variables by using the scripts in /receipt-wrangler-api/dev. Use
 ```bash
 source /receipt-wrangler-api/dev/switch-to-sqlite.sh
 ```

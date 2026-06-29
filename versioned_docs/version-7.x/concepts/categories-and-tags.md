@@ -1,10 +1,10 @@
 # Categories and Tags
 
-Categories and tags serve as a way to catagorize receipts in different ways.  
+Categories and tags serve as a way to categorize receipts in different ways.  
 Categories are a broad way to group receipts together, such as Groceries, Travel Expenses, Utilities, and so on.  
 Tags are a more specific way to group receipts together, such as Bakery, Gas, Water, and so on.
 
-Categories and Tags are completley optional, and they are only for the user to help organize their receipts.  
+Categories and Tags are completely optional, and they are only for the user to help organize their receipts.  
 Categories can be filtered on in dashboards, and also in the receipts table.
 
 ## Managing Categories or Tags
@@ -33,7 +33,7 @@ This field allows the user to name the category or tag.
 ### Description
 
 This field allows the user to describe the category or tag.  
-This field is useful when using AiPoweredReceipts, since it helps the AI determine which categories/tags to select based
+This field is useful when using AI Powered Receipts, since it helps the AI determine which categories/tags to select based
 on the receipt information it received.  
 It is a good idea to add a description to each category or tag, to get the best results.
 
