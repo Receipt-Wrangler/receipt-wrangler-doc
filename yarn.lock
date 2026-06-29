@@ -2286,10 +2286,10 @@
     unist-util-visit "^5.0.0"
     vfile "^6.0.0"
 
-"@mdx-js/react@^3.0.0", "@mdx-js/react@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.npmjs.org/@mdx-js/react/-/react-3.1.0.tgz"
-  integrity sha512-QjHtSaoameoalGnKDT3FoIl4+9RwyTmo9ZJGBdLOks/YOiWHoRDI3PUwEzOE7kEmGcV3AFcp9K6dYu9rEuKLAQ==
+"@mdx-js/react@^3.0.0", "@mdx-js/react@^3.1.1":
+  version "3.1.1"
+  resolved "https://registry.npmjs.org/@mdx-js/react/-/react-3.1.1.tgz"
+  integrity sha512-f++rKLQgUVYDAtECQ6fn/is15GkEH9+nZPM3MS0RcxVqoTfawHvDlSCH7JbMhAM6uJ32v3eXLvLmLvjGu7PTQw==
   dependencies:
     "@types/mdx" "^2.0.0"
 
@@ -4334,14 +4334,14 @@ docusaurus-plugin-redoc@2.5.0:
     "@redocly/openapi-core" "1.16.0"
     redoc "2.4.0"
 
-docusaurus-theme-redoc@2.5.0:
-  version "2.5.0"
-  resolved "https://registry.npmjs.org/docusaurus-theme-redoc/-/docusaurus-theme-redoc-2.5.0.tgz"
-  integrity sha512-ykLmnnvE20Im3eABlIpUnXnT2gSHVAjgyy2fU2G8yecu7zqIE+G/SiBpBg/hrWMUycL31a8VSG7Ehkf3pg1u+A==
+docusaurus-theme-redoc@2.5.1:
+  version "2.5.1"
+  resolved "https://registry.npmjs.org/docusaurus-theme-redoc/-/docusaurus-theme-redoc-2.5.1.tgz"
+  integrity sha512-BGbDv748peVQwttDQbhGCnA5eXtcBa76WP+nmc7Vz0bwEJv5Dh9et/WHJBRlFu97ScMS38+WpBnexCvYv3HYww==
   dependencies:
     "@redocly/openapi-core" "1.16.0"
     clsx "^1.2.1"
-    lodash "^4.17.21"
+    lodash "^4.17.23"
     mobx "^6.12.4"
     postcss "^8.4.45"
     postcss-prefix-selector "^1.16.1"
@@ -4931,13 +4931,13 @@ fraction.js@^5.3.4:
   resolved "https://registry.npmjs.org/fraction.js/-/fraction.js-5.3.4.tgz"
   integrity sha512-1X1NTtiJphryn/uLQz3whtY6jK3fTqoE3ohKs0tT+Ujr1W59oopxmoEh7Lu5p6vBaPbgoM0bzveAW4Qi5RyWDQ==
 
-framer-motion@^12.23.12:
-  version "12.23.12"
-  resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-12.23.12.tgz"
-  integrity sha512-6e78rdVtnBvlEVgu6eFEAgG9v3wLnYEboM8I5O5EXvfKC8gxGQB8wXJdhkMy10iVcn05jl6CNw7/HTsTCfwcWg==
+framer-motion@^12.42.0:
+  version "12.42.0"
+  resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-12.42.0.tgz"
+  integrity sha512-wp7EJnfWaaEScVygKv3e20udoRz+LbtxScsuTkakAxfXmt+ReC6WyPW2nINRAGvd+hG9odwcjBLyOTPjH5pBRA==
   dependencies:
-    motion-dom "^12.23.12"
-    motion-utils "^12.23.6"
+    motion-dom "^12.42.0"
+    motion-utils "^12.39.0"
     tslib "^2.4.0"
 
 fresh@~0.5.2:
@@ -5948,7 +5948,7 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.npmjs.org/lodash.uniq/-/lodash.uniq-4.5.0.tgz"
   integrity sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==
 
-lodash@^4.17.20, lodash@^4.17.21:
+lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.23:
   version "4.18.1"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.18.1.tgz"
   integrity sha512-dMInicTPVE8d1e5otfwmmjlxkZoUpiVLwyeTdUsi/Caj/gfzzblBcCE5sRHV/AsjuCmxWrte2TNGSYuCeCq+0Q==
@@ -6844,17 +6844,17 @@ mobx@^6.0.4, mobx@^6.12.4, mobx@^6.9.0:
   resolved "https://registry.npmjs.org/mobx/-/mobx-6.13.7.tgz"
   integrity sha512-aChaVU/DO5aRPmk1GX8L+whocagUUpBQqoPtJk+cm7UOXUk87J4PeWCh6nNmTTIfEhiR9DI/+FnA8dln/hTK7g==
 
-motion-dom@^12.23.12:
-  version "12.23.12"
-  resolved "https://registry.npmjs.org/motion-dom/-/motion-dom-12.23.12.tgz"
-  integrity sha512-RcR4fvMCTESQBD/uKQe49D5RUeDOokkGRmz4ceaJKDBgHYtZtntC/s2vLvY38gqGaytinij/yi3hMcWVcEF5Kw==
+motion-dom@^12.42.0:
+  version "12.42.0"
+  resolved "https://registry.npmjs.org/motion-dom/-/motion-dom-12.42.0.tgz"
+  integrity sha512-M63h4n8R+quJdNhBwuLlgxM+OLYa9+I/T2pzDRboB9fLXRdbou+Gw7Zury+SkpaCyACP1JHSjHgZ1EgTkBr30w==
   dependencies:
-    motion-utils "^12.23.6"
+    motion-utils "^12.39.0"
 
-motion-utils@^12.23.6:
-  version "12.23.6"
-  resolved "https://registry.npmjs.org/motion-utils/-/motion-utils-12.23.6.tgz"
-  integrity sha512-eAWoPgr4eFEOFfg2WjIsMoqJTW6Z8MTUCgn/GZ3VRpClWBdnbjryiA3ZSNLyxCTmCQx4RmYX6jX1iWHbenUPNQ==
+motion-utils@^12.39.0:
+  version "12.39.0"
+  resolved "https://registry.npmjs.org/motion-utils/-/motion-utils-12.39.0.tgz"
+  integrity sha512-8nadJAJjTtqRkmRF36FoJTrywK9nnFmnPwnSMyxaOCU7GDjN9RTMJIxx9De8ErM+vpPhMccr/6fo5WciyQLnMQ==
 
 mrmime@^2.0.0:
   version "2.0.1"
@@ -8261,13 +8261,13 @@ redoc@2.4.0:
     swagger2openapi "^7.0.8"
     url-template "^2.0.8"
 
-redocusaurus@2.5.0:
-  version "2.5.0"
-  resolved "https://registry.npmjs.org/redocusaurus/-/redocusaurus-2.5.0.tgz"
-  integrity sha512-QWJX2hgnEfSDb7fZzS4iZe6aqdAvm/XLCsNv6RkgDw6Pl/lsTZKipP2n1r5QS1CC5hY8eAwsjVXeF7B03vkz2g==
+redocusaurus@2.5.2:
+  version "2.5.2"
+  resolved "https://registry.npmjs.org/redocusaurus/-/redocusaurus-2.5.2.tgz"
+  integrity sha512-81xELtq+yRW1p+407yroPRvmIDjK5QNldYi5hRAJC1vVPKWm6lzBQ9HihE+51520MuAbZWmNNVa1ml5DhlDd1A==
   dependencies:
     docusaurus-plugin-redoc "2.5.0"
-    docusaurus-theme-redoc "2.5.0"
+    docusaurus-theme-redoc "2.5.1"
 
 reflect-metadata@^0.2.2:
   version "0.2.2"
