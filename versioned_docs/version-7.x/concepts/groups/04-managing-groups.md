@@ -79,7 +79,7 @@ These regexes drive which emails are read for this group.
 
 :::warning
 
-If no subject line regexes are set, or email whitelists are added, then ALL emails will be read.
+If no email whitelist is set, then emails from any sender are read. Once one or more addresses are added to the whitelist, only emails from those addresses are read.
 
 :::
 

@@ -8,17 +8,22 @@ Receipt Wrangler Documentation - A Docusaurus-based documentation website for th
 
 ## Development Commands
 
+> This project uses **npm** as its package manager (single `package-lock.json`).
+
 ### Local Development
+
 ```bash
-yarn start          # Starts development server on http://localhost:3000 with hot reload
-yarn build          # Creates production build in ./build directory
-yarn serve          # Serves production build locally
-yarn typecheck      # Runs TypeScript type checking
+npm install         # Installs dependencies
+npm start           # Starts development server on http://localhost:3000 with hot reload
+npm run build       # Creates production build in ./build directory
+npm run serve       # Serves production build locally
+npm run typecheck   # Runs TypeScript type checking
 ```
 
 ### Deployment
+
 ```bash
-yarn deploy         # Deploys to GitHub Pages (requires GIT_USER or USE_SSH)
+npm run deploy      # Deploys to GitHub Pages (requires GIT_USER or USE_SSH)
 ```
 
 ## Architecture and Structure
