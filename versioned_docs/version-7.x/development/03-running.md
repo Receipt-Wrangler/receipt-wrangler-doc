@@ -16,7 +16,7 @@ This project uses:
   endpoint)
 - Overall, no framework is used for the API
 - Uses built in test runner
-- Uses OpenAPI 3.0, maintained by hand to generate clients.
+- Uses OpenAPI 3.1, maintained by hand to generate clients.
 
 ### Running the application
 1\. Navigate to the root directory  

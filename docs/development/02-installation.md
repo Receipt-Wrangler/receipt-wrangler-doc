@@ -59,13 +59,13 @@ Then you can use the obtained IP address to SSH into the container. To learn how
 
 1. Clone the repository https://github.com/Receipt-Wrangler/receipt-wrangler-api.git
 2. Install tesseract dependencies. If you are running a debian derivative (recommended),
-   run `sudo sh set-up-tesseract-env.sh`, otherwise see https://github.com/otiai10/gosseract for other installation
+   run `sudo sh set-up-dependencies.sh`, otherwise see https://github.com/otiai10/gosseract for other installation
    details.
 3. Install OpenAPI generator v6 https://openapi-generator.tech/docs/installation (I personally use the jar installation)
 4. Set up a db instance however you like. Sqlite is the easiest route to go. Otherwise, docker is recommended.
    Example mariadb docker
    command: `docker run --name receipt-wrangler-db -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_USER=wrangler -e MYSQL_PASSWORD=123456 -e MYSQL_DATABASE=wrangler -p 9001:3306 -d library/mariadb`.
-5. Set your environment variables, see [configuration documentation](/docs/configuration) for more details.
+5. Set your environment variables, see [configuration documentation](/docs/configuration/environment-variables) for more details.
    Alternatively, source one of the script files in /dev in the Receipt Wrangler project to set some default environment
    variables for you.
 6. In the terminal navigate to the root project directory
