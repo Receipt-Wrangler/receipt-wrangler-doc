@@ -2,6 +2,12 @@
 
 Before upgrading to version 7.x, please read along with the guide so you know what to expect.
 
+:::warning Mobile app compatibility
+If you use the Receipt Wrangler mobile app, make sure it is updated to **version 2.x** before
+upgrading. Earlier mobile app versions are not compatible with 7.x, and **users will not be able to
+log in** until the app is updated.
+:::
+
 ## What changed in 7.x
 
 Version 7.x replaces Receipt Wrangler's fixed roles with a configurable **roles and permissions**
