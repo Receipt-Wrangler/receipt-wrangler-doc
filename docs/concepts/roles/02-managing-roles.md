@@ -92,7 +92,7 @@ without granting *Delete Users*. For a complete list of every permission, see th
 
 ### Category & tag access
 
-Group roles have two extra sections that application roles don't. The first is **Category & tag
+Group roles have three extra sections that application roles don't. The first is **Category & tag
 access**.
 
 ![category, tag, and paid-by access for a group role](/img/roles/role-form-group-grants.png)
@@ -108,9 +108,31 @@ see based on who paid for them. Add specific people to restrict members to only 
 pin **Their own receipts** to also include the member's own. Leave it empty for access to every
 payer's receipts.
 
+### Report template access
+
+The third group-only section is **Report template access**, which limits a group role to specific
+**report templates** and the actions its members may take on them.
+
+![the report template access matrix for a group role](/img/roles/role-form-report-template-access.png)
+
+It's a grid: each row is a report template, and the columns are the actions — **View**, **Generate**,
+**Edit**, **Delete**, and **Duplicate**. Toggle a cell to grant that action on that template, or use the
+per-row **All** switch to grant every action for a template at once. (Creating a template isn't listed,
+since a new template has nothing yet to scope.)
+
+Leave the whole grid unchecked for **unrestricted** access — members can act on every template their
+group access already allows. The moment you check anything, the role is restricted to exactly the
+templates and actions you've checked, and loses access to the rest. If no report templates exist yet,
+the section shows a note instead of a grid.
+
+For the full picture of how this combines with the reporting permissions, see
+[Reporting permissions](../reporting/05-reporting-permissions.md).
+
 :::info
-Category and tag access hide *fields* on a receipt that's still visible, while paid-by visibility
-hides the *whole receipt*. Both are opt-in: an empty section means no restriction.
+Category and tag access hide *fields* on a receipt that's still visible, and paid-by visibility hides
+the *whole receipt* — both limit the receipt data a member can see. Report template access is different:
+it limits *which report templates and actions* a member can use, not what receipt data they can see. All
+three are opt-in: an empty section means no restriction.
 :::
 
 When you're finished, click **Save Role**.
