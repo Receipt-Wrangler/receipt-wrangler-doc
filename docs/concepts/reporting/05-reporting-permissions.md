@@ -100,8 +100,12 @@ Two flows don't go through the per-template matrix, because there's no saved tem
   attach. You can never point a template at a group whose receipts you can't read. The same rule applies
   when you change a template's groups on update.
 - **Generating a one-off report** from the builder (without saving a template) requires
-  `app.reports.generate` and `group.reports.read` in every group in scope. A freshly duplicated template
-  also starts out with no per-template restrictions.
+  `app.reports.generate` and `group.reports.read` in every group in scope.
+
+**Duplicating a template** produces a new template that carries no per-template grants of its own. A role
+with an unrestricted (all-empty) matrix can act on the copy right away, but a role that's restricted to
+specific templates gains no access to the copy until an administrator grants it the new template's cells —
+duplication never lifts an existing restriction.
 
 ## Viewing versus downloading
 

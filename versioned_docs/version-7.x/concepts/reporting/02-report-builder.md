@@ -115,9 +115,9 @@ template. Saving needs a name in addition to a runnable configuration. Its behav
 opened the builder:
 
 - On a **new** report, it **creates** a template (requires the **Save Report Templates** permission,
-  `app.reports.create`).
+  `app.reports.create`, or its `app.reports.createAll` variant).
 - On a **saved** report, it **updates that template in place** (requires the **Update Report Templates**
-  permission, `app.reports.update`).
+  permission, `app.reports.update`, or its `app.reports.updateAll` variant).
 
 So someone who can open a template but not update it simply won't see a save action. To make a copy
 instead of overwriting, use **Duplicate** on the [Reports list](./03-report-templates.md). For the full

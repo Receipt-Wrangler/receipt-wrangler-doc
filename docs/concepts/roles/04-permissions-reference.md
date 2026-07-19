@@ -132,7 +132,7 @@ restrictions on a role:
 
 | Permission | Key | What it allows |
 | --- | --- | --- |
-| Read All Report Templates | `app.reports.readAll` | View and act on every report template, bypassing per-group access and per-template restrictions. |
+| Read All Report Templates | `app.reports.readAll` | View every report template, bypassing per-group access and per-template restrictions. |
 | Create Reports For Any Group | `app.reports.createAll` | Save templates against any group, bypassing the group-access requirement on create. |
 | Update All Report Templates | `app.reports.updateAll` | Update any template, bypassing per-group access and per-template restrictions. |
 | Delete All Report Templates | `app.reports.deleteAll` | Delete any template, bypassing per-group access and per-template restrictions. |
