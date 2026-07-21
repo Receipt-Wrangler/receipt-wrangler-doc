@@ -115,6 +115,33 @@ account.
 | --- | --- | --- |
 | Search Receipts | `app.receipts.search` | Search across receipts you can access. |
 
+### Reports
+
+| Permission | Key | What it allows |
+| --- | --- | --- |
+| Access Reports | `app.reports.read` | Open the report builder and view saved report templates. |
+| Save Report Templates | `app.reports.create` | Save a new report template. |
+| Update Report Templates | `app.reports.update` | Change an existing report template. |
+| Delete Report Templates | `app.reports.delete` | Remove a report template. |
+| Duplicate Report Templates | `app.reports.duplicate` | Copy a report template. |
+| Generate Reports | `app.reports.generate` | Generate and download reports. |
+
+Each reporting action also has an **"…All"** counterpart that performs the same action on **any**
+template, bypassing the per-group access ceiling (`group.reports.read`) and the per-template
+restrictions on a role:
+
+| Permission | Key | What it allows |
+| --- | --- | --- |
+| Read All Report Templates | `app.reports.readAll` | View every report template, bypassing per-group access and per-template restrictions. |
+| Create Reports For Any Group | `app.reports.createAll` | Save templates against any group, bypassing the group-access requirement on create. |
+| Update All Report Templates | `app.reports.updateAll` | Update any template, bypassing per-group access and per-template restrictions. |
+| Delete All Report Templates | `app.reports.deleteAll` | Delete any template, bypassing per-group access and per-template restrictions. |
+| Duplicate All Report Templates | `app.reports.duplicateAll` | Duplicate any template, bypassing per-group access and per-template restrictions. |
+| Generate All Reports | `app.reports.generateAll` | Generate any template, bypassing per-group access and per-template restrictions. |
+
+For how these combine with the group permission and the per-template matrix, see
+[Reporting permissions](../reporting/05-reporting-permissions.md).
+
 ## Group permissions
 
 These belong to **group** roles and govern what a member can do **inside a single group**.
@@ -151,6 +178,12 @@ These belong to **group** roles and govern what a member can do **inside a singl
 | Update Dashboards | `group.dashboards.update` | Edit dashboards. |
 | Delete Dashboards | `group.dashboards.delete` | Remove dashboards. |
 | Read Widgets | `group.widgets.read` | Read widget data (charts, summaries). |
+
+### Reports
+
+| Permission | Key | What it allows |
+| --- | --- | --- |
+| Read Reports | `group.reports.read` | Generate and download reports over the group's receipts. |
 
 ### Activity
 

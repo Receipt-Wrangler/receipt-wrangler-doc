@@ -59,6 +59,13 @@ named "Legacy". If you are upgrading, see the [Migration Guide](/docs/migration-
 your existing users and members are mapped onto them. For the precise permissions each one grants, see
 the [Permissions Reference](./04-permissions-reference.md).
 
+:::info
+Reporting is available to administrators out of the box, but not to ordinary users: **Legacy Admin**
+includes every reporting permission while **Legacy User** does not. Reporting also introduces a base plus
+**"…All"** permission pattern, where the "…All" variant bypasses per-group and per-template limits for a
+single action. See [Reporting permissions](../reporting/05-reporting-permissions.md).
+:::
+
 ## Default roles
 
 Exactly one application role and one group role are marked as the **default** (shown with a **Default**
