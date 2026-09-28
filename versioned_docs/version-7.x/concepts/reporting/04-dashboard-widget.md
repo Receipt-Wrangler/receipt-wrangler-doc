@@ -13,7 +13,8 @@ Report widgets are added like any other widget, from the dashboard form (see
 ![the dashboard form with the Report widget type and its template picker](/img/reporting/report-widget-form.png)
 
 The **Report** widget type only appears in the list if your role grants the **Access Reports** permission
-(`app.reports.read`), and the template picker only lists templates you're allowed to see.
+(`app.reports.read`) or **Read All Report Templates** (`app.reports.readAll`), and the template picker only lists
+templates you're allowed to see.
 
 ## What the widget shows
 
