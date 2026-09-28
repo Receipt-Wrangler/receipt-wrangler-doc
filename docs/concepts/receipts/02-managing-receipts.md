@@ -28,6 +28,12 @@ If AI is configured, then receipts can be added via AI as well. Check out the [A
 
 Once a user has navigated to a receipt, the following screen will show. ![receipt-form](/img/receipts/receipt-form.png)
 
+:::note
+A group can hide some parts of the receipt form, such as images, comments, or the categories and tags on receipts,
+items and shares. If a section described below is missing, check the group's
+[Group Receipt Settings](../groups/05-group-receipt-settings.md).
+:::
+
 ### Audit Details
 
 When you view or edit a saved receipt, the **Audit Details** section at the top of the form shows its history at a

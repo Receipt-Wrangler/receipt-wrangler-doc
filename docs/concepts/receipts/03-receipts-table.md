@@ -282,7 +282,7 @@ selection, the card shows the difference. Resolved and Draft shares, and plain i
 
 The Receipt Summary is a block of totals for the receipts in the table. It's off by default. Someone with
 **Update Group** (`group.update`) turns it on in the group's **Group Receipt Settings** tab (see
-[Managing Groups](../groups/04-managing-groups.md)). In its **Receipt Summary** section they check
+[Group Receipt Settings](../groups/05-group-receipt-settings.md#receipt-summary)). In its **Receipt Summary** section they check
 **Show the receipt summary** and choose:
 
 * **Summary position**: **Below the table** (the default) or **Above the table**;
