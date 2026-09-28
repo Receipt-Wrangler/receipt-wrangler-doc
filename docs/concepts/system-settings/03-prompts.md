@@ -74,8 +74,9 @@ This is the prompt that will be used in the receipt processing settings.
 ## Prompting
 
 Allowing administrators to configure prompts of their own, allows a huge amount of flexibility, and power into the
-system. The main caveat to keep in mind while prompting, is that these are global prompts, so we cannot assign prompts
-to groups yet for more specific prompts. However, the prompting logic will remain the same.
+system. The prompt chosen in the receipt processing settings applies to every group. A group can use a more specific
+prompt of its own instead: see [AI Settings](../groups/04-managing-groups.md#ai-settings) in the group's
+**Group AI Settings** tab. The prompting logic is the same either way.
 
 Before getting into different use cases, lets take a look at how prompting in Receipt Wrangler works.
 
@@ -207,7 +208,6 @@ The items should be in the format:
     {
         "name": item name,
         "amount": item cost as a number,
-        "name": name of the item as a string,
         "status": "DRAFT",
         "chargedToUserId": 1
     }

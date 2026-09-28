@@ -188,7 +188,7 @@ edit, see [System Tasks](../system-tasks.md).
 ### Who sees what
 
 Everyone who can see the widget sees the same group activity, whoever did it. The exception is a group with
-**Isolate members** turned on (see [Managing Groups](./04-managing-groups.md)), where members can't see each other.
+**Isolate members** turned on (see [Isolate members](./04-managing-groups.md#isolate-members)), where members can't see each other.
 There, a member only sees:
 
 * their own activity;

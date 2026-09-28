@@ -12,5 +12,5 @@ malformed (corrupted, not actually an image), then the file will not be processe
    email to use. Additionally,
    configure
    other fields in the group settings to specify which emails to process. Check
-   out [the Group settings section](/docs/concepts/groups/managing-groups#group-settings) for more information.
+   out [the Group settings section](/docs/concepts/groups/managing-groups#group-ai-settings) for more information.
 
