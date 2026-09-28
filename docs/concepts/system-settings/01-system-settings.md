@@ -2,23 +2,24 @@
 
 System settings are where app-wide configurations are stored.
 
-To access to system settings, log in as an administrator, and then click on the avatar menu, and then click the
-"System Settings" button, as shown below.
+To open system settings, click the avatar menu, and then click **System Settings**, as shown below. It opens on the
+first tab your role is allowed to see. The permissions for this tab are described under
+[Managing System Settings](#managing-system-settings).
 
 ![System Settings](/img/system-settings/system-settings-arrow.png)
 
 ## Managing System Settings
 
-Once the user has navigated to the system settings page, they will be presented with the following screen to view,
-to view/edit the system settings.
+Once the user has navigated to the system settings page, they will be presented with the following screen, where they
+can view and edit the system settings.
 
-![System Settings](/img/system-settings/system-settings-form.png)
+![The top of the System Settings form in view mode, showing the Details section](/img/system-settings/system-settings-form-v7.png)
 
 To change a setting, click the pencil icon next to the page title, make your changes, and click **Save**. Viewing this
 page needs the **Read System Settings** permission (`app.system-settings.read`), and changing it needs **Update System
 Settings** (`app.system-settings.update`). See the [permissions reference](../roles/04-permissions-reference.md).
 
-## General Settings
+## Details
 
 ### Enable Local Signup
 
@@ -35,10 +36,13 @@ processed image will be stored in the temp directory for debugging purposes. Thi
 This field contains the Receipt Processing Settings used by the app globally. Setting this field allows email
 integrations to be used, as well as quick scans, and magic fill.
 
-### Fallback Processing Settings
+### Fallback Receipt Processing Settings
 
-This field contains the Fallback Processing Settings used by the app globally. These fallback settings are used when the
-primary Receipt Processing Settings fail to process a receipt, then the fallback settings are used.
+This field contains the Fallback Receipt Processing Settings used by the app globally. These fallback settings are used
+when the primary Receipt Processing Settings fail to process a receipt.
+
+The field stays read-only until **Receipt Processing Settings** has a value. Its list leaves out the settings chosen
+there, because the fallback can't be the same as the primary.
 
 ### PDF rasterization DPI
 
@@ -46,31 +50,47 @@ This field determines the DPI (dots per inch) used when rasterizing PDF receipts
 `300`. A higher value produces a sharper image (better OCR accuracy) at the cost of more memory and processing time. The
 value may be `0` (use the default) or between `72` and `1200`.
 
+## Task Server Settings
+
+The task server runs the app's background work, such as Quick Scans and reading receipt emails. This section sets how
+much of that work runs at once and how it's prioritized.
+
+The circular arrow next to the section title is the **Restart Task Server** button. It restarts the task server, and
+needs the **Restart Task Server** permission (`app.system-settings.restart-task-server`). When the restart finishes,
+"Task server restarted successfully" is shown.
+
 ### Task Concurrency
 
 This field determines how many background tasks the app processes concurrently across its job queues. It defaults to
-`10`. Lower it on small instances to reduce memory usage; raise it on larger instances to process more work in parallel.
+`10`, and `0` means one task per CPU core available to the server. Lower it on small instances to reduce memory usage;
+raise it on larger instances to process more work in parallel.
 
-### Email polling interval in seconds
+### Email polling interval (in seconds)
 
 This field determines how often enabled email integrations are polled for new emails. The default value is 1800 seconds,
-or 30 minutes.
+or 30 minutes. A new interval takes effect when you save, without restarting the task server.
 
 ### Task Queue Configuration
 
 The app processes background work (Quick Scan, email polling, email receipt processing, image cleanup, and system
-cleanup) across several named queues. Each queue has a configurable **priority** — a relative weight that determines how
-much of the available task concurrency a queue receives, so higher-priority queues are favored when work is contended.
-The queues are:
+cleanup) across several named queues. Each queue has a card with a **Priority** field: a relative weight that
+determines how much of the available task concurrency a queue receives, so higher-priority queues are favored when work
+is contended. The higher the value, the higher the priority. The queues are:
 
-- **Quick Scan** — processes Quick Scan requests.
 - **Email Polling** — polls configured system emails for new messages.
 - **Email Receipt Processing** — processes receipts ingested from email.
 - **Email Receipt Image Cleanup (retired)** — no longer used. Temporary file cleanup moved to **System Clean Up**.
+- **Quick Scan** — processes Quick Scan requests.
 - **System Clean Up** — periodic system maintenance: it expires old sign-in tokens and removes temporary files (see
   [Temporary Files](#temporary-files)).
 
-## Currency Settings
+### Restarting the task server
+
+A new **Task Concurrency** or queue **Priority** only takes effect once the task server restarts. When you save a
+change to either, the page shows the warning "Please restart the task server for the changes to take effect." Click
+**Restart Task Server** to apply the change; the warning goes away once the restart finishes.
+
+## Currency Format
 
 ### Previews
 

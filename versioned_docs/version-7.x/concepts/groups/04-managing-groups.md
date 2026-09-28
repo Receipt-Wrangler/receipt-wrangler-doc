@@ -192,7 +192,7 @@ prompt of those settings is used.
 
 The prompt used when the fallback runs, that is, when processing one of this group's receipts with the main settings
 fails. It only applies when System Settings has
-[Fallback Processing Settings](../system-settings/01-system-settings.md#fallback-processing-settings); without them,
+[Fallback Processing Settings](../system-settings/01-system-settings.md#fallback-receipt-processing-settings); without them,
 this field is ignored. As with the group specific prompt, everything else comes from the fallback settings.
 
 #### Where the group's prompts are used
