@@ -195,7 +195,7 @@ The buttons only appear when all of these are true:
 
 An administrator sets this under **System Settings** > **Temporary Files** > **Keep failed uploads for**, in hours or
 days. The default is 30 days. It can be anywhere from 24 hours to 8760 hours (1 year). After that the file is removed
-and the preview and download buttons disappear. See [System Settings](./system-settings/01-system-settings.md).
+and the preview and download buttons disappear. See [Temporary Files](./system-settings/01-system-settings.md#temporary-files).
 
 ![The Temporary Files section of System Settings, set to keep failed uploads for 30 days](/img/system-tasks/temporary-files-setting.png)
 
