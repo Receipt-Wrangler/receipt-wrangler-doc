@@ -17,8 +17,8 @@ To edit receipts, your group role must allow editing receipts (such as the **Leg
 
 Receipts can be added manually by:
 
-* Navigating to the receipt table, and clicking on the add
-  button ![receipt-table-add](/img/receipts/receipt-table-add.png)
+* Navigating to the receipt table, and clicking on the **Add Receipt**
+  button. <br/> ![the receipts table toolbar with the Add Receipt button](/img/receipts/table/toolbar.png)
 * Clicking the add button on the sidebar, then clicking on add
   receipt. <br/> ![receipt-sidebar-add](/img/receipts/receipt-sidebar-add.png)
 
@@ -83,13 +83,17 @@ The receipt can't be saved until the amounts are corrected.
 
 This field lets users associate categories to receipts. This allows users to broadly group receipts, which can be later
 filtered on, for example: "Food", "House", "Vacation", "Bills", etc. If the category that the user wants does not exist,
-it will be created upon creating/updating the receipt.
+type its name and pick the **Add** option, for example **Add Vacation**. It will be created upon creating/updating the
+receipt. The **Add** option only appears if your application role grants **Create Categories**
+(`app.categories.create`). Without it, you can only pick existing categories.
 
 ### Tags
 
 This field lets users associate tags to receipts. This allows users to group receipts in a more granular way, which can
 be later filtered on, for example: "Delivery", "Grubhub", "Gas Bill", "Electricity Bill", etc. If the tag that the user
-wants does not exist, it will be created upon creating/updating the receipt.
+wants does not exist, type its name and pick the **Add** option, for example **Add Grubhub**. It will be created upon
+creating/updating the receipt. The **Add** option only appears if your application role grants **Create Tags**
+(`app.tags.create`). Without it, you can only pick existing tags.
 
 ### Date
 
@@ -107,12 +111,14 @@ User who paid for the receipt.
 
 Status of the receipt. These are for the user to define, but below a description will be given for the intended use and
 how each behaves.
+
+A new receipt starts as **Open**, and you can change it before saving. Receipts created by
+[Quick Scan](../ai.md#quick-scan) or by email get their status from the scan or from the group's settings instead.
+
 The options are:
 
-* Draft: Initial state of the receipt. When the receipt status is changed to this status, all the receipt items' status
-  will be set to
-  draft
-  as well.
+* Draft: The receipt is still being worked on, for example its data isn't complete yet. When the receipt status is
+  changed to this status, all the receipt items' status will be set to draft as well.
 * Open: Receipt data is complete and is ready to be resolved. When the receipt status is changed to this status, the
   receipt
   items'
@@ -290,27 +296,39 @@ The comments section is a place where users can add notes about the receipt.
 
 In the images section, users can perform multiple actions per image. Below is the image section in edit mode. In view
 mode some of the buttons below will appear, but not all of them. We will go over the buttons from left to right.
-![receipt-image](/img/receipts/receipt-image.png)
+![the Images section header in edit mode with its eight buttons](/img/receipts/form/image-toolbar.png)
+
+Apart from **Upload Image(s)**, the buttons only appear once the receipt has at least one image.
+
+| Button | Viewing | Editing | Adding |
+| --- | --- | --- | --- |
+| **Upload Image(s)** | No | Yes | Yes |
+| **Download Image** | Yes | Yes | No |
+| **Hide Images** / **Show Images** | Yes | Yes | Yes |
+| **Show Fullscreen Image** | Yes | Yes | Yes |
+| **Zoom In**, **Zoom Out** | Yes | Yes | Yes |
+| **Magic fill** | No | Yes | Yes |
+| **Remove Image** | No | Yes | Yes |
 
 #### Upload Image(s)
 
-This button will allow users to upload an image, or multiple images to the receipt.
+This button will allow users to upload an image, or multiple images to the receipt. While you are editing a saved
+receipt, the images are uploaded straight away ("Successfully uploaded image(s)"), without saving the form. While you
+are adding a receipt, they are uploaded when you save it.
 
 #### Download Image
 
-This button will download a single image that is currently selected in the image section.
+This button will download a single image that is currently selected in the image section. It's only shown for saved
+receipts, not while you are adding one.
 
 #### Hide Images
 
-This button will hide all the images in the image section.
-
-#### Expand Image
-
-This button will expand the image(s) in the image section.
+This button will hide all the images in the image section. It then becomes **Show Images**, which shows them again.
 
 #### Show Fullscreen Image
 
-This button will show an image in fullscreen mode.
+This button will show an image in fullscreen mode. Click **Close** (the cross in the top-right corner) to go back to
+the form.
 
 #### Zoom In
 
@@ -322,12 +340,17 @@ This button will zoom out of the image that is currently selected.
 
 #### Magic Fill (AI Required)
 
-This button will perform magic fill. This will send the image to the configured AI to read the receipt and fill in the
-form with the data that it found.
+The **Magic fill** button will perform magic fill. This will send the image that is currently selected to the
+configured AI to read the receipt and fill in the form with the data that it found. The receipt isn't saved until you
+save it. The button only appears while adding or editing a receipt, and only when AI receipt processing is set up. It's
+disabled unless your group role grants **Magic Fill Receipts** (`group.receipts.magic-fill`). See
+[Magic Fill](../ai.md#magic-fill).
 
 #### Remove Image
 
-This button will remove an image from the image section.
+This button will remove the image that is currently selected from the image section. It doesn't ask you to confirm.
+While you are editing a saved receipt, the image is deleted straight away ("Image successfully removed"), without saving
+the form.
 
 ## Duplicating Receipts
 
