@@ -46,6 +46,7 @@ These belong to **application** roles and govern what a person can do across the
 | Delete Tags | `app.tags.delete` | Remove tags. |
 | Create Custom Fields | `app.custom-fields.create` | Create new custom field definitions. |
 | Read Custom Fields | `app.custom-fields.read` | List and look up custom fields. |
+| Update Custom Fields | `app.custom-fields.update` | Edit an existing custom field's name, description, and select options. The field's type can never be changed. |
 | Delete Custom Fields | `app.custom-fields.delete` | Remove custom field definitions. |
 
 ### System
@@ -73,6 +74,7 @@ These belong to **application** roles and govern what a person can do across the
 | Create Groups | `app.groups.create` | Create new groups. |
 | Read All Groups | `app.groups.read` | List and look up groups across the system, including ones you are not a member of. |
 | Update Group System Settings | `app.groups.update-settings` | Edit system-level settings on any group. |
+| Delete Any Group | `app.groups.delete` | Permanently delete any group in the system, including ones the calling user is not a member of. Intended for cleaning up abandoned or accidentally created groups; pairs with Read All Groups. |
 
 ### Security
 
@@ -153,6 +155,10 @@ These belong to **group** roles and govern what a member can do **inside a singl
 | View Group | `group.view` | See the group, its members, and metadata. |
 | Update Group | `group.update` | Edit group name, settings, and receipt-handling configuration. |
 | Delete Group | `group.delete` | Permanently delete the group. |
+| Add Group Members | `group.members.create` | Add members to the group. |
+| Update Group Members | `group.members.update` | Change a member's group role. |
+| Remove Group Members | `group.members.delete` | Remove members from the group. |
+| Assign Member Categories & Tags | `group.members.grants.update` | Assign which categories and tags an individual member can see, within the limits of their group role. |
 | Poll Inbound Email | `group.email.poll` | Trigger an inbound email poll for the group's inbox. |
 
 ### Receipts
@@ -177,7 +183,7 @@ These belong to **group** roles and govern what a member can do **inside a singl
 | Read Dashboards | `group.dashboards.read` | View dashboards. |
 | Update Dashboards | `group.dashboards.update` | Edit dashboards. |
 | Delete Dashboards | `group.dashboards.delete` | Remove dashboards. |
-| Read Widgets | `group.widgets.read` | Read widget data (charts, summaries). |
+| Read Widgets | `group.widgets.read` | See the data in Pie Chart dashboard widgets. It's the only widget that uses this permission; see [Widget Types](../groups/02-managing-dashboards.md#widget-types) for what the others need. |
 
 ### Reports
 

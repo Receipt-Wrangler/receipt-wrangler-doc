@@ -16,8 +16,10 @@ Receipts can be split amongst the users in the group, and only members of the gr
 Group members are added in the group screen by anyone whose group role allows managing membership, and can be removed, or added at any time.
 Receipts may only exist in one group at a time, but receipts can also be moved across groups when editing a receipt.
 
-Additionally, each group can have a set of dashboards associated with them.
-This allows users to really hone in on what they care about for this specific group, and only this group.
+Additionally, each user can build their own dashboards for each group they're in. Dashboards are personal: other
+members of the group don't see yours, and you don't see theirs.
+This allows each user to really hone in on what they care about for this specific group, and only this group.
+See [Managing Dashboards](./02-managing-dashboards.md).
 
 ## What is the "All" group?
 

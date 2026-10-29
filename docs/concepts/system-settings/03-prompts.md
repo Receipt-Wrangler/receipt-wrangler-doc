@@ -3,11 +3,14 @@
 Prompts allow Administrators to configure prompts, to be used within receipt processing settings to communicate with the
 configured AI.
 
-To access prompts, log in as an administrator, and then click on the avatar menu, and then click the "System Settings"
-button, as shown below.
-Then click on the "Prompts" tab.
+To access prompts, click on the avatar menu, and then click **System Settings**, as shown below. Then click on the
+**Prompts** tab.
 
 ![System Settings](/img/system-settings/system-settings-arrow.png)
+
+The tab needs the **Read AI Prompts** permission (`app.prompts.read`). Adding or duplicating a prompt needs **Create AI
+Prompts** (`app.prompts.create`), editing one needs **Update AI Prompts** (`app.prompts.update`), and deleting one needs
+**Delete AI Prompts** (`app.prompts.delete`). See the [permissions reference](../roles/04-permissions-reference.md).
 
 ## Viewing Prompts
 
@@ -41,8 +44,13 @@ This allows the user to duplicate the prompt.
 
 #### Delete
 
-This allows the user to delete the prompt, as long as it is not used in any receipt processing settings. Otherwise, a
-snackbar will be displayed that informs the user what the prompt is currently related to.
+This allows the user to delete the prompt, as long as nothing uses it. A prompt is in use when receipt processing
+settings use it, or when a group uses it as its **Group specific prompt** or **Fallback group specific prompt** (see
+[AI Settings](../groups/04-managing-groups.md#ai-settings)).
+
+While a prompt is in use, its **Delete** button is disabled. Clicking it shows a message that names what uses the
+prompt, for example: "Cannot delete Default Prompt as it is associated with the following receipt processing settings
+or groups: Local LLM".
 
 ## Managing Prompts
 
@@ -74,8 +82,9 @@ This is the prompt that will be used in the receipt processing settings.
 ## Prompting
 
 Allowing administrators to configure prompts of their own, allows a huge amount of flexibility, and power into the
-system. The main caveat to keep in mind while prompting, is that these are global prompts, so we cannot assign prompts
-to groups yet for more specific prompts. However, the prompting logic will remain the same.
+system. The prompt chosen in the receipt processing settings applies to every group. A group can use a more specific
+prompt of its own instead: see [AI Settings](../groups/04-managing-groups.md#ai-settings) in the group's
+**Group AI Settings** tab. The prompting logic is the same either way.
 
 Before getting into different use cases, lets take a look at how prompting in Receipt Wrangler works.
 
@@ -207,7 +216,6 @@ The items should be in the format:
     {
         "name": item name,
         "amount": item cost as a number,
-        "name": name of the item as a string,
         "status": "DRAFT",
         "chargedToUserId": 1
     }
