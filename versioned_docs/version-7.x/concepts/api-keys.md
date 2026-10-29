@@ -36,13 +36,16 @@ To manage your API keys:
 3. Select **User Settings** from the menu
 4. Open the **API Keys** tab (see [User Settings](./user-settings.md))
 
+The **API Keys** tab needs the **Read API Keys** permission (`app.api-keys.read`). Without it, the tab isn't shown
+(see [User Settings](./user-settings.md)).
+
 **For Administrators**: Admin users can view and manage API keys for all users by using the filter options.
 
 ### Creating API Keys
 
 To create a new API key:
 
-1. Navigate to the API Keys section in Settings
+1. Open the **API Keys** tab in **User Settings**
 2. Click the "Create API Key" button (+ icon)
 3. Fill out the API key form:
    - **Name**: A descriptive name for the API key (required)

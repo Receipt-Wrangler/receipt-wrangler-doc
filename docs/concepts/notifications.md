@@ -90,7 +90,10 @@ a person, so every member of the group gets one.
   [Bulk Status Update](./receipts/03-receipts-table.md#bulk-status-update) doesn't send one either, even when it leaves
   a comment.
 * **Failed Quick Scans and email uploads.** Look for these in [System Tasks](./system-tasks.md) and in a dashboard's
-  [Activity](./groups/02-managing-dashboards.md#activity) widget, where you can also retry them.
+  [Activity](./groups/02-managing-dashboards.md#activity) widget, where you can also retry them. System Tasks needs
+  **Read System Tasks** (`app.system-tasks.read`), which the built-in **Legacy User** role doesn't include. The
+  Activity widget needs **Read Activities** (`group.activities.read`) in the group, and retrying needs
+  **Rerun Activities** (`group.activities.rerun`).
 
 ## Other things to know
 
@@ -109,5 +112,6 @@ Two application permissions control notifications. See the
 | **Read Notifications** (`app.notifications.read`) | Shows the bell and lets you see your notifications. Without it, the header has no bell. |
 | **Delete Notifications** (`app.notifications.delete`) | Lets you clear your notifications with **Mark all as read**. |
 
-The built-in **Legacy User** role, the default application role for new accounts, and **Legacy Admin** both include
-both permissions.
+The built-in **Legacy User** role includes both permissions. Out of the box, it's the default application role for
+new accounts, though an administrator can change the default (see [Default roles](./roles/01-overview.md#default-roles)).
+**Legacy Admin** also includes both permissions.
