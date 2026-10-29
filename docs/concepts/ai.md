@@ -30,7 +30,7 @@ Clicking on either of these buttons will display the following dialog:
 ![the empty Quick Scan dialog with Select images to upload and the Upload Images button](/img/ai/quick-scan-empty.png)
 
 From here, the user may upload an image, or many images, with the **Upload Images** button. Many common image formats
-are supported, as well as .HEIC and .PDF single and multi page files are supported.
+are supported, as well as .HEIC files and single- or multi-page .PDF files.
 
 Once an image/pdf is uploaded, then the following carousel will display. Each image gets its own set of fields. With
 more than one image, use the **Navigate left** and **Navigate right** arrows to move between them. **Remove Current
