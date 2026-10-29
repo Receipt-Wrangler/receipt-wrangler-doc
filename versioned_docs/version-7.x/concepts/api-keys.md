@@ -32,9 +32,12 @@ rw.1.<base64-id>.<base64-secret>
 To manage your API keys:
 
 1. Log into Receipt Wrangler
-2. Click on your avatar in the top-right corner
-3. Select "Settings" from the dropdown menu
-4. Navigate to the "API Keys" section
+2. Click your avatar at the top of the sidebar (open the sidebar first with the **Toggle sidebar** button in the header)
+3. Select **User Settings** from the menu
+4. Open the **API Keys** tab (see [User Settings](./user-settings.md))
+
+The **API Keys** tab needs the **Read API Keys** permission (`app.api-keys.read`). Without it, the tab isn't shown
+(see [User Settings](./user-settings.md)).
 
 **For Administrators**: Admin users can view and manage API keys for all users by using the filter options.
 
@@ -42,7 +45,7 @@ To manage your API keys:
 
 To create a new API key:
 
-1. Navigate to the API Keys section in Settings
+1. Open the **API Keys** tab in **User Settings**
 2. Click the "Create API Key" button (+ icon)
 3. Fill out the API key form:
    - **Name**: A descriptive name for the API key (required)

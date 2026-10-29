@@ -254,8 +254,8 @@ When **Show login QR code** is on, the QR code appears in two places:
 - **Under the Login form**, below the heading **Set up the mobile app**, with the caption "Scan with your phone to open
   the app and connect it to this server." It's also under the **Sign Up** form when
   [Enable Local Signup](#enable-local-signup) is on.
-- **In the About dialog**, in a **Mobile App** section. Click your avatar, then **About**. Anyone who is signed in can
-  open it, so someone already using the web app can set up their phone from there.
+- **In the [About](../about.md) dialog**, in a **Mobile App** section. Click your avatar, then **About**. Anyone who
+  is signed in can open it, so someone already using the web app can set up their phone from there.
 
 ![The login page with the Set up the mobile app QR code under the Login button](/img/system-settings/login-page-qr.png)
 

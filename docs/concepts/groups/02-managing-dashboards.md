@@ -254,8 +254,6 @@ this month.
 ### How the values are worked out
 
 * Each receipt counts with its full amount. Items and shares don't split it up.
-* A receipt with several categories or tags counts in full in each of them. So a **Categories** or **Tags** chart can
-  add up to more than the group actually spent.
 * Every status counts, including **Draft** and **Declined**, unless you filter by **Status**.
 * Receipts with no category go into an **Uncategorized** slice, and receipts with no tag into an **Untagged** slice.
 * If your role limits which categories or tags you can see, the ones you can't see are grouped into a
