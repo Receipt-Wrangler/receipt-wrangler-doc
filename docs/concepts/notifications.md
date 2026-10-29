@@ -12,14 +12,13 @@ The bell is at the right of the header, between the **Search receipts** box and 
 The red badge on the bell shows how many notifications you have. Notifications aren't marked as read or unread, so the
 number counts every notification you haven't cleared. When you have none, the bell has no badge.
 
-The number doesn't refresh by itself. It updates:
+The number updates:
 
 * when you sign in or reload the page;
 * each time you open the notifications panel;
 * when you clear your notifications with **Mark all as read**.
 
-A notification that arrives while you have the app open shows up the next time you open the panel or reload the page.
-Moving between pages in the app doesn't update the number.
+To see the latest notifications, open the panel.
 
 ## The notifications panel
 
